@@ -30,7 +30,7 @@ $accent-dk: #666666;
 $accent-dkr: #333333;
 
 /* Application */
-$app-bg-clr: white;
+$app-bg-clr: $white;
 $app-clr: $accent-dk;
 $disabled: #c9c8c6;
 
@@ -41,7 +41,7 @@ $aside-bg-clr: #f9f9f9;
 $label-clr: $accent-dk;
 
 /* Link */
-$link-clr: #0077B3;
+$link-clr: $brand-clr-dk;
 $link-hover-clr: $brand-clr-dk;
 $link-visited-clr: $brand-clr-dk;
 
