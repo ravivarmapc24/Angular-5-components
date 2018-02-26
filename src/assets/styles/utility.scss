@@ -153,12 +153,7 @@ label {
 .border-dark {
     border: 1px solid $accent-dkr;
 }
-.border-lighter {
-    border: 1px solid $accent-ltr;
-}
-.border-bottom-lighter {
-    border-bottom: 1px solid $accent-ltr;
-}
+
 .border-bottom-white {
     border-bottom: 1px solid $white;
 }
@@ -210,18 +205,11 @@ label {
 .color-brand-dk {
     color: $brand-clr-dk;
 }
-.color-brand-dkr {
-    color: $brand-clr-dkr;
-}
+
 .color-accent-lt {
     color: $accent-lt;
 }
-.color-accent-ltr {
-    color: $accent-ltr;
-}
-.color-accent-ltst{
-    color: $accent-ltst;
-}
+
 .color-accent-dk {
     color: $accent-dk;
 }

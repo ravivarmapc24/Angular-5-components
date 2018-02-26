@@ -18,78 +18,32 @@ $msg-green: #2f8848;
 $transparent: transparent;
 
 /* Brand Color Shades */
-$brand-clr: #003087;
-$brand-clr-secondary: #f1c400;
-$brand-clr-lt: #31afdf;
-$brand-clr-ltr: #f5f5f5;
-$brand-clr-dk: #18789C;
-$brand-clr-dkr: #004b70;
+$brand-clr: #0865a8;
+$brand-clr-secondary: #09357A;
+$brand-clr-lt: #407DB0;
+$brand-clr-ltr: #07B6F8;
+$brand-clr-dk: #0077B3;
 
 /* accent Shades */
-$accent-lt: #aaaaaa;
-$accent-ltr:#cecece;
-$accent-ltst:#eeeeee;
-$accent-dk: #707070;
+$accent-lt: #999999;
+$accent-dk: #666666;
 $accent-dkr: #333333;
 
 /* Application */
-$app-bg-clr: $brand-clr-ltr;
+$app-bg-clr: white;
 $app-clr: $accent-dk;
 $disabled: #c9c8c6;
 
-
-/*Dashboard*/
-$contact-container-border-rad: 15px;
-$icon-border-radius: 50%;
-$contact-link-border-radius: 35px;
-
-/* Header */
-$header-bg-clr: $brand-clr;
-$header-border-clr: $brand-clr-secondary;
-$header-clr: $white;
-$signout-border-rad: 20px;
-$header-notification-border-rad: 50%;
-
-/*adjust-huener*/
-$adjust-huener-border-rad: 10px;
-
-/*Footer*/
-$footer-bg-clr: $brand-clr;
-$footer-clr: $white;
-
-/* Searchbox */
-$searchbox-bg-clr: #e5e9f2;
-$searchbox-border-rad: 25px;
-
-/* Primary Nav */
-$primary-nav-bg-clr: #2663ac;
-$primary-nav-item-bg-clr: $white;
-$primary-nav-item-clr: $brand-clr;
-$primary-nav-active-item-bg-clr: $brand-clr-dk;
-$primary-nav-active-border-clr: $brand-clr-secondary;
-
-/* Secondary Nav */
-$secondary-nav-item-bg-clr: #f4f4f4;
-$secondary-nav-item-clr: $accent-dk;
-$secondary-nav-active-item-clr: $brand-clr;
-$secondary-nav-active-border-clr: $brand-clr-secondary;
-$secondary-border-clr: $brand-clr-lt;
-
 /* Aside */
 $aside-bg-clr: #f9f9f9;
-
-/* Quicklinks */
-$quicklinks-bg-clr: $aside-bg-clr;
-$quicklinks-clr: $accent-dk;
-$quicklinks-nav-item-clr: $white;
 
 /* Label */
 $label-clr: $accent-dk;
 
 /* Link */
-$link-clr: #1985f9;
+$link-clr: #0077B3;
 $link-hover-clr: $brand-clr-dk;
-$link-visited-clr: $brand-clr-dkr;
+$link-visited-clr: $brand-clr-dk;
 
 /* Disabled */
 $disabled: #f4f4f4;
