@@ -296,7 +296,15 @@ label {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
 /*margin*/
 .mrg-lft0{margin-left:0px !important;}
 .mrg-lft5{margin-left:5px !important;}

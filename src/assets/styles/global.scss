@@ -1,14 +1,8 @@
 
 
 /* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
 
-
-body {
-    padding: 20px;
-}
-.text-center {
-    text-align: center;
-}
 ng-select {
   width: 300px;
 }
@@ -20,20 +14,13 @@ h3 {
 h3.text-left {
     text-align: left;
 }
-.pad-20 {
-    padding: 20px;
-}
-.border {
-    border: 1px solid #cecece;
-}
-
 
 body {
-  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-family: $font-body;
   text-align: left;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: $global-font-size;
   line-height: 2rem;
   letter-spacing: 0.01rem;
   color: #212121;
@@ -42,5 +29,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   margin: 0;
-  position: relative;
+  padding: 20px;
 }
