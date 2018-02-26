@@ -1,0 +1,121 @@
+<div>
+  <h3>Data Table / Data Grid</h3>
+  <div class="pad-20 border">
+      <ngx-datatable
+        class="material"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="50"
+        [scrollbarV]="true"
+        [scrollbarH]="true"
+        [rows]="rows">
+  <ngx-datatable-column
+          name="Name"
+          [width]="300"
+          [frozenLeft]="true">
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          name="Gender">
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          name="Age">
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          name="City"
+          [width]="150"
+          prop="address.city">
+        </ngx-datatable-column>
+         <ngx-datatable-column
+          name="Age">
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          name="City"
+          [width]="150"
+          prop="address.city">
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          name="State"
+          [width]="300"
+          prop="address.state"
+          [frozenRight]="true">
+        </ngx-datatable-column>
+      </ngx-datatable>
+  </div>
+  
+</div>
+
+<app-accordion>
+</app-accordion>
+
+<app-modal>
+</app-modal>
+
+<app-pagination>
+</app-pagination>
+
+<app-popover>
+</app-popover>
+
+<app-progressbar>
+</app-progressbar>
+
+<app-tooltip>
+</app-tooltip>
+
+
+<hr>
+<h2 class="text-center">
+  Material Components
+</h2>  
+
+<app-checkbox>
+</app-checkbox>
+<app-material>
+</app-material>
+
+
+<app-ng-bootstrap>
+</app-ng-bootstrap>
+
+
+<h3 class="black">
+  Date Picker
+</h3>
+<div class="pad-20 border">
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker startView="year" md-current-view="year" [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+</div>
+
+
+<h3>
+  Time Picker
+</h3>
+<div class="pad-20 border">
+<label>
+    Time
+    <input [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4">
+    <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
+</label>
+</div>
+
+<h3>
+  Select
+</h3>
+
+<div class="pad-20 border">
+<mat-form-field>
+  <mat-select placeholder="Favorite food">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{ food.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+
+
+<router-outlet></router-outlet>

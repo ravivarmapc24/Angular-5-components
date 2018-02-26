@@ -1,0 +1,21 @@
+<h3 class="text-left">
+  Checkbox
+</h3>
+
+<div class="pad-20 border">
+<mat-checkbox>Check me!</mat-checkbox>
+</div>
+
+
+<h3 class="text-left">
+MultiSelect
+</h3>
+<div class="pad-20 border">
+  <ng-select [items]="cities"
+                   bindLabel="name"
+                   bindValue="id"
+                   [multiple]="true"
+                   placeholder="Select city"
+                   [(ngModel)]="selectedCityId">
+        </ng-select>
+</div>
