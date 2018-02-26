@@ -3,18 +3,14 @@ $path-to-fonts: "./assets/fonts";
 $path-to-images: "/assets/images";
 $global-font-size : 16px; 
 
-
-
 /* Common */
 $black: #000000;
 $white: #FFFFFF;
-$grey: #cccccc;
-$red: #ffa9a9;
-$green: #00b233;
 $orange: #ff8500;
 $error-red: #ff5050;
 $red: red;
 $beige: #faec9c;
+$green: #00b233;
 $success-green: #59C203;
 $msg-green: #2f8848;
 $transparent: transparent;
@@ -31,13 +27,22 @@ $accent-lt: #999999;
 $accent-dk: #666666;
 $accent-dkr: #333333;
 
+/* Grey */
+$grey: #cccccc;
+$grey-lt: #f9f9f9;
+$grey-dk: #d8d8d8;
+
+
+
+/* Application level changes */
+
 /* Application */
 $app-bg-clr: $white;
 $app-clr: $accent-dk;
-$disabled: #c9c8c6;
+$disabled: $grey-dk;
 
 /* Aside */
-$aside-bg-clr: #f9f9f9;
+$aside-bg-clr: $grey-lt;
 
 /* Label */
 $label-clr: $accent-dk;
@@ -48,9 +53,11 @@ $link-hover-clr: $brand-clr-dk;
 $link-visited-clr: $brand-clr-dk;
 
 /* Disabled */
-$disabled: #f4f4f4;
+$disabled: $grey-lt;
 $disabled-font: $accent-lt;
-$muted-white: #d8d8d8;
+$muted-white: $grey-dk;
+
+/* Component level changes */
 
 
 /*Media Queries Config*/
