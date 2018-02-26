@@ -1,7 +1,9 @@
 /* Path for images and fonts */
 $path-to-fonts: "./assets/fonts";
 $path-to-images: "/assets/images";
-$global-font-size : 14px; 
+$global-font-size : 16px; 
+
+
 
 /* Common */
 $black: #000000;
@@ -30,7 +32,7 @@ $accent-dk: #666666;
 $accent-dkr: #333333;
 
 /* Application */
-$app-bg-clr: white;
+$app-bg-clr: $white;
 $app-clr: $accent-dk;
 $disabled: #c9c8c6;
 

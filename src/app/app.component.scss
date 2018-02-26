@@ -4,3 +4,15 @@
 .black {
     color: $black;
 }
+
+/* Header css */
+
+header{
+    .logo{
+        background: url(#{$path-to-images}/header-logo.png);
+        height: 51px;
+        width: 283px;
+        background-size: 223px;
+        background-repeat: no-repeat;
+    }
+}

@@ -23,11 +23,11 @@ body {
   font-size: $global-font-size;
   line-height: 2rem;
   letter-spacing: 0.01rem;
-  color: #212121;
-  background-color: #fafafa;
+  color: $app-clr;
+  background-color: $app-bg-clr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
