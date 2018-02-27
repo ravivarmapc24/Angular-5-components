@@ -4,32 +4,32 @@
   color: $black;
 }
 
+
 /* Layout */
 
-.layout{
-    &.container-fluid {
-        @include display-flex;
+.layout {
+  &.container-fluid {
+    @include display-flex;
     @include flex-direction(column);
     @include flex(1 0 auto);
     height: 100%;
     min-height: 100vh;
-    }
+  }
 }
 
 
 /* Header css */
 
 header {
-    @include browserprefix(box-shadow, 0px 1px 1px 6px rgba(0,0,0,.16));
-    border-bottom: 1.5px solid #eaeaea;
-  .logo-wrapper  {
-      height: 51px;
+  @include browserprefix(box-shadow, inset 0px -1px 1px 0px rgba(0, 0, 0, .16));
+  .logo-wrapper {
+    height: 51px;
     .logo {
-        background: url(#{$path-to-images}/header-logo.png);
-        height: 51px;
-        width: 283px;
-        background-size: 223px;
-        background-repeat: no-repeat;
+      background: url(#{$path-to-images}/header-logo.png);
+      height: 51px;
+      width: 283px;
+      background-size: 223px;
+      background-repeat: no-repeat;
     }
   }
   /*Hamburger Menu*/
@@ -65,50 +65,67 @@ header {
       span {
         background: $brand-clr;
         height: 3px;
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
-        &:nth-child(2) {
-          top: 10px;
-          @include browserprefix(transform, rotate(45deg));
-        }
-        &:nth-child(3) {
-          top: 10px;
-          @include browserprefix(transform, rotate(-45deg));
-        }
-        &:nth-child(4) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        top: 10px;
+        @include browserprefix(transform, rotate(45deg));
+      }
+      &:nth-child(3) {
+        top: 10px;
+        @include browserprefix(transform, rotate(-45deg));
+      }
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
       }
     }
   }
+}
+
 
 /* Main Pane*/
 
 aside {
-    z-index: 1;
-    position: relative;
-    background-color: $aside-bg-clr;
-    width: 360px;
-    transition: width 0.2s ease;
-    @include browserprefix(box-shadow, 2px 0 6px 0 #eaeaea);
+  z-index: 1;
+  position: relative;
+  background-color: $aside-bg-clr;
+  width: 360px;
+  transition: width 0.2s ease;
+  @include browserprefix(box-shadow, 2px 0 6px 0 #eaeaea);
 }
+
 article {
-    background: $white;
-    min-height: 100%;
-    padding: 20px;
-    position: relative;
-    transition: width 0.2s ease;
+  background: $white;
+  min-height: 100%;
+  padding: 20px;
+  position: relative;
+  transition: width 0.2s ease;
 }
-aside + article {
-    width: calc(100% - 360px);
+
+aside+article {
+  width: calc(100% - 360px);
 }
+
 main {
-    @include flex(1 0 auto);
-    @include display-flex;
-    @include flex-direction(row);
-    position: relative;
+  @include flex(1 0 auto);
+  @include display-flex;
+  @include flex-direction(row);
+  position: relative;
+}
+
+
+/*media queries*/
+
+
+@media #{$medium} {
+    aside {
+        transform: translateX(-360px);
+    }
+    aside + article {
+        width: 100%;
+    }
 }

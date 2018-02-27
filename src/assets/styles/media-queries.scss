@@ -1,0 +1,12 @@
+
+/*media queries*/
+
+
+@media #{$medium} {
+    aside {
+        transform: translateX(-360px);
+    }
+    aside + article {
+        width: 100%;
+    }
+}
