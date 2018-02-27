@@ -4,14 +4,13 @@
 
 @import 'styles.scss';
 @import './../assets/styles/mixins.scss';
-@import './../assets/styles/media-queries.scss';
 
 /* Layout */
 
 .layout {
   &.container-fluid {
     @include display-flex;
-    @include flex-direction(column); 
+    @include flex-direction(column);
     @include flex(1 0 auto);
     height: 100%;
     min-height: 100vh;
@@ -92,8 +91,8 @@ header {
   position: fixed;
   display: none;
   width: 100%;
-  height: 100%;
-  top: 0;
+  height: calc(100% - 67px);
+  top: 67px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -108,7 +107,7 @@ aside {
   position: relative;
   background-color: $aside-bg-clr;
   width: 360px;
-  transition: all 0.2s ease;
+  transition: width 0.2s ease;
   .resizer {
     display: none;
   }
@@ -119,7 +118,7 @@ article {
   min-height: 100%;
   padding: 20px;
   position: relative;
-  transition: none;
+  transition: width 0.2s ease;
 }
 
 aside+article {
@@ -303,7 +302,7 @@ main {
       position: absolute;
       top: 0px;
       right: -40px;
-      width: 40px;
+      width: 40px;  
       height: 40px;
       background: $grey-lt;
       .hamburger-btn{
@@ -317,7 +316,7 @@ main {
         background:  $brand-clr;
         transition: all 0.18s cubic-bezier(0.810, -0.330, 0.345, 1.375);
         transition-delay: 0.18s;
-        transform: none;    
+        transform: none;
       }
       &.active {
           .hamburger-btn{
@@ -341,14 +340,15 @@ main {
     }
     &.opened {
       width: 360px;
-      position: fixed;
+      transition: width 0.2s ease;
+      position: absolute;
       height: 100%;
       z-index: 1000;
-      top: 0;
     }
   }
   aside+article {
     width: 100%;
+    transition: width 0.2s ease;
   }
   .overlay {
     &.opened {
@@ -356,7 +356,3 @@ main {
     }
   }
 }
-
-
-
-
