@@ -121,76 +121,1010 @@
 <router-outlet></router-outlet>
 -->
 
-<header>
 
-  <div class="px-3 py-2 d-flex justify-content-between">
-    <div class="logo-wrapper">
-      <a class="logo d-inline-block" href="#">
+
+<div class="layout container-fluid p-0">
+  <div class="overlay" [ngClass]="{'opened': isMenuOpened }"></div>
+  <header>
+
+    <div class="px-3 py-2 d-flex justify-content-between">
+      <div class="logo-wrapper">
+        <a class="logo d-inline-block" href="#">
+  
+            </a>
+      </div>
+      <div class="nav-icon3 navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <aside [ngClass]="{'opened': isMenuOpened }">
+      <div class="resizer" [ngClass]="{'active': isMenuOpened }" (click)="toggleNavbar($event)">
+        <div class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </div>
+    </aside>
+    <article>
+      <div class="rate-quote-header">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="lft-sect">
+              <h1>
+                Your Quotes
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="rt-sect">
+              <button>
+                  Sort by Rate
+                </button>
+              <button class="filter-btn">
+                  Filter your quotes <span class="badge badge-default">20</span>
+                </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="head-desc pt-2">We recommend the following rates for a loan amount of <a href="javaScript:;">$260,000</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-container">
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-box-header">
+          <h1>
+            <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+          </h1>
+        </div>
+
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                        <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
+
+
+
+
+
+<!--div class="layout container-fluid p-0">
+  <header>
+
+    <div class="px-3 py-2 d-flex justify-content-between">
+      <div class="logo-wrapper">
+        <a class="logo d-inline-block" href="#">
+  
+            </a>
+      </div>
+      <div class="nav-icon3 navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <aside>
+
+    </aside>
+    <article>
+      <div class="rate-quote-header">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="lft-sect">
+              <h1>
+                Your Quotes
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="rt-sect">
+              <button>
+                Sort by Rate
+              </button>
+              <button class="filter-btn">
+                Filter your quotes <span class="badge badge-default">20</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="head-desc pt-2">We recommend the following rates for a loan amount of <a href="javaScript:;">$260,000</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="box-container">
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-box-header">
+          <h1>
+            <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+          </h1>
+        </div>
+
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-container-in">
+          <div class="row">
+            <div class="col-12">
+              <div class="sub-head">
+                Lowest APR
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="head">
+                <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+              <div class="summary-sect">
+                <button> 
+                      <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</div-->
+
+
+
+<!--div class="layout container-fluid p-0">
+  <header>
+
+    <div class="px-3 py-2 d-flex justify-content-between">
+      <div class="logo-wrapper">
+        <a class="logo d-inline-block" href="#">
     
               </a>
+      </div>
+      <div class="nav-icon3 navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class="nav-icon3 navbar-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
 
-</header>
+  </header>
 
-<div class="box-container">
-  <div class="box-container-in">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-head">
-          Lowest APR
-        </div>
-      </div>
-      <div class="col-12">
-          <div class="head"> 
-            <span>30 Yr Fixed</span> <span class="btn btn-outline-secondary custom-popover-cls" placement="right"
-            ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</span>
-    
-          </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect"> 
-          <div>RATE</div>
-          <div>4.275%</div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect">
-          <div>RATE</div>
-          <div>4.275%</div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect">
-          <div>RATE</div>
-          <div>4.275%</div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect">
-          <div>RATE</div>
-          <div>4.275%</div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect">
-          <div>RATE</div>
-          <div>4.275%</div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
-        <div class="summary-sect">
-          <button> 
-            <span class="d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">View Details |</span> <span>></span> 
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
+
+  <main>
+    <aside>
+
+    </aside>
+    <article>
+
+    </article>
+  </main-->

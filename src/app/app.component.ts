@@ -5,12 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+
+  isMenuOpened: boolean = false;
   title = 'app';
- foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+  foods = [
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' }
   ];
 
   rows = [];
@@ -31,4 +34,9 @@ export class AppComponent {
     req.send();
 
   }
+  toggleNavbar(event) {
+    this.isMenuOpened = !this.isMenuOpened;
+    event.preventDefault();
+  }
+
 }

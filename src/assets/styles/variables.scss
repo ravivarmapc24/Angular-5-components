@@ -32,8 +32,6 @@ $grey: #cccccc;
 $grey-lt: #f9f9f9;
 $grey-dk: #d8d8d8;
 
-
-
 /* Application level changes */
 
 /* Application */
@@ -59,15 +57,14 @@ $muted-white: $grey-dk;
 
 /* Component level changes */
 
-
 /*Media Queries Config*/
 
-$xsmall: #{"only screen and (max-width: 767px)"};
-$small: #{"only screen and (max-width: 991px)"};
-$medium: #{"only screen and (max-width: 1199px)"};
+$xsmall: #{"only screen and (max-width: 575px)"};
+$small: #{"only screen and (max-width: 767px)"};
+$medium: #{"only screen and (max-width: 991px)"};
+$large: #{"only screen and (max-width: 1199px)"};
 
 /* Font Config */
-
 
 $font-body: "OpenSans";
 $font-default: "OpenSans";

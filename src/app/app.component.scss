@@ -1,85 +1,164 @@
+
+
+
+
 @import 'styles.scss';
 @import './../assets/styles/mixins.scss';
-.black {
-    color: $black;
-}
+@import './../assets/styles/media-queries.scss';
 
+/* Layout */
+
+.layout {
+  &.container-fluid {
+    @include display-flex;
+    @include flex-direction(column); 
+    @include flex(1 0 auto);
+    height: 100%;
+    min-height: 100vh;
+  }
+}
 
 /* Header css */
 
 header {
-    .logo-wrapper {
-        height: 51px;
-        .logo {
-            background: url(#{$path-to-images}/header-logo.png);
-            height: 51px;
-            width: 283px;
-            background-size: 223px;
-            background-repeat: no-repeat;
-        }
+  @include browserprefix(box-shadow, inset 0px -1px 1px 0px rgba(0, 0, 0, .16));
+  .logo-wrapper {
+    height: 51px;
+    .logo {
+      background: url(#{$path-to-images}/header-logo.png);
+      height: 51px;
+      width: 283px;
+      background-size: 223px;
+      background-repeat: no-repeat;
     }
-    .navbar-toggle {
-        width: 22px;
-        position: relative;
-        top: 12px;
-        @include browserprefix(transform, rotate(0deg));
-        @include browserprefix(transition, .5s ease-in-out);
-        cursor: pointer;
-        span {
-            display: block;
-            position: absolute;
-            @include width-height(100%, 4px);
-            background: $brand-clr;
-            border-radius: 9px;
-            opacity: 1;
-            left: 0;
-            @include browserprefix(transform, rotate(0deg));
-            @include browserprefix(transition, .25s ease-in-out);
-            &:nth-child(1) {
-                top: 0px;
-            }
-            &:nth-child(2),
-            &:nth-child(3) {
-                top: 9px;
-            }
-            &:nth-child(4) {
-                top: 18px;
-            }
-        }
-        &.opened {
-            span {
-                background: $brand-clr;
-                height: 3px;
-                top: 18px;
-                width: 0%;
-                left: 50%;
-            }
-            &:nth-child(2) {
-                top: 10px;
-                @include browserprefix(transform, rotate(45deg));
-            }
-            &:nth-child(3) {
-                top: 10px;
-                @include browserprefix(transform, rotate(-45deg));
-            }
-            &:nth-child(4) {
-                top: 18px;
-                width: 0%;
-                left: 50%;
-            }
-        }
+  }
+  /*Hamburger Menu*/
+  .navbar-toggle {
+    width: 22px;
+    position: relative;
+    top: 15px;
+    @include browserprefix(transform, rotate(0deg));
+    @include browserprefix(transition, .5s ease-in-out);
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      @include width-height(100%, 4px);
+     background: $brand-clr;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      @include browserprefix(transform, rotate(0deg));
+      @include browserprefix(transition, .25s ease-in-out);
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 9px;
+      }
+      &:nth-child(4) {
+        top: 18px;
+      }
     }
+    &.opened {
+      span {
+        background: $brand-clr;
+        height: 3px;
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        top: 10px;
+        @include browserprefix(transform, rotate(45deg));
+      }
+      &:nth-child(3) {
+        top: 10px;
+        @include browserprefix(transform, rotate(-45deg));
+      }
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+}
+
+/* Overlay*/
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/*Main Pane*/
+
+aside {
+  z-index: 1;
+  position: relative;
+  background-color: $aside-bg-clr;
+  width: 360px;
+  transition: all 0.2s ease;
+  .resizer {
+    display: none;
+  }
+}
+
+article {
+  background: $white;
+  min-height: 100%;
+  padding: 20px;
+  position: relative;
+  transition: none;
+}
+
+aside+article {
+  width: calc(100% - 360px);
+}
+
+main {
+  @include flex(1 0 auto);
+  @include display-flex;
+  @include flex-direction(row);
+  position: relative;
 }
 
 
-/* Box container css  */
+/* Right article - Box container css  */
 
 .box-container {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0;
     float: left;
     position: relative;
+    .main-box-header{
+        h1{
+            float: left;
+            width: 100%;
+            position: relative;
+            font-size: 26px;
+            margin: 0;
+            padding: 1rem 0 2rem;
+            .custom-popover-cls{
+                border-radius: 100%;
+                padding: 2px 10px;
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
     .box-container-in {
+        margin-bottom: 30px;
         width: 100%;
         float: left;
         position: relative; 
@@ -130,11 +209,12 @@ header {
         }
         button {
             background: none;
-            border: 1px solid #ccc;
+            border: 1px solid $brand-clr-secondary;
             padding: 2px 29px;
             border-radius: 4px;
             position: relative;
             top: 10px;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
             color: $brand-clr-secondary;
@@ -148,3 +228,135 @@ header {
         }
     }
 }
+
+/* Right article -Rate Quote CSS */
+.rate-quote-header{
+    width:100%;
+    float: left;
+    position: relative;
+    .lft-sect{
+        h1{
+            padding: 15px 0 0;
+            margin: 0;
+            font-size: 26px;
+        }
+    }
+    .rt-sect{
+        float: right;
+        button{
+            background: none;
+            border: 1px solid $brand-clr;
+            padding: 2px 29px;
+            border-radius: 4px;
+            position: relative;
+            top: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            color: $brand-clr; 
+            &:first-of-type{
+                margin-right: 10px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background: $brand-clr;
+                border: 1px solid $brand-clr;
+                color: $white;
+                span.badge{
+                    background: $white;
+                    color:  $brand-clr;
+                }
+            }
+        }
+        .filter-btn{
+            span.badge{
+                background: $brand-clr;
+                padding: 0.55em .6em;
+                color: $white;
+                margin-left: 10px;
+            }
+        }
+    }
+    .head-desc{
+        margin: 0;
+        a{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+/*media queries*/
+
+
+
+@media #{$medium} {
+    
+  aside {
+    width: 0px;
+    .resizer {
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      right: -40px;
+      width: 40px;
+      height: 40px;
+      background: $grey-lt;
+      .hamburger-btn{
+          margin: 8px 0;
+      }
+      span {
+        width: 80%;
+        height: 2px;
+        margin: 5px auto;
+        display: block;
+        background:  $brand-clr;
+        transition: all 0.18s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+        transition-delay: 0.18s;
+        transform: none;    
+      }
+      &.active {
+          .hamburger-btn{
+          margin: 15px 0;
+      }
+        span {
+          transition: all 0.18s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+          transition-delay: 0.18s;
+          margin: 0 auto;
+          &:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+          }
+        }
+      }
+    }
+    &.opened {
+      width: 360px;
+      position: fixed;
+      height: 100%;
+      z-index: 1000;
+      top: 0;
+    }
+  }
+  aside+article {
+    width: 100%;
+  }
+  .overlay {
+    &.opened {
+      display: block;
+    }
+  }
+}
+
+
+
+
