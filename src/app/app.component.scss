@@ -1,18 +1,72 @@
 @import 'styles.scss';
 @import './../assets/styles/mixins.scss';
-
 .black {
-    color: $black;
+  color: $black;
 }
+
 
 /* Header css */
 
-header{
-    .logo{
+header {
+  .logo-wrapper  {
+      height: 51px;
+    .logo {
         background: url(#{$path-to-images}/header-logo.png);
         height: 51px;
         width: 283px;
         background-size: 223px;
         background-repeat: no-repeat;
     }
-}
+  }
+  .navbar-toggle {
+    width: 22px;
+    position: relative;
+    top: 12px;
+    @include browserprefix(transform, rotate(0deg));
+    @include browserprefix(transition, .5s ease-in-out);
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      @include width-height(100%, 4px);
+      background: $brand-clr;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      @include browserprefix(transform, rotate(0deg));
+      @include browserprefix(transition, .25s ease-in-out);
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 9px;
+      }
+      &:nth-child(4) {
+        top: 18px;
+      }
+    }
+    &.opened {
+      span {
+        background: $brand-clr;
+        height: 3px;
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          top: 10px;
+          @include browserprefix(transform, rotate(45deg));
+        }
+        &:nth-child(3) {
+          top: 10px;
+          @include browserprefix(transform, rotate(-45deg));
+        }
+        &:nth-child(4) {
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
