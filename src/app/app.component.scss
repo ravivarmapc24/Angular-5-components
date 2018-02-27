@@ -1,9 +1,5 @@
 @import 'styles.scss';
 @import './../assets/styles/mixins.scss';
-.black {
-  color: $black;
-}
-
 
 /* Layout */
 
@@ -87,7 +83,23 @@ header {
 }
 
 
-/* Main Pane*/
+/* Overlay*/
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: calc(100% - 67px);
+  top: 67px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+
+/*Main Pane*/
 
 aside {
   z-index: 1;
@@ -95,7 +107,9 @@ aside {
   background-color: $aside-bg-clr;
   width: 360px;
   transition: width 0.2s ease;
-  @include browserprefix(box-shadow, 2px 0 6px 0 #eaeaea);
+  .resizer {
+    display: none;
+  }
 }
 
 article {
@@ -120,12 +134,66 @@ main {
 
 /*media queries*/
 
-
 @media #{$medium} {
-    aside {
-        transform: translateX(-360px);
+  aside {
+    width: 0px;
+    transition: width 0.2s ease;
+    .resizer {
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      right: -40px;
+      width: 40px;
+      height: 40px;
+      background: $grey-lt;
+      .hamburger-btn{
+          margin: 8px 0;
+      }
+      span {
+        width: 80%;
+        height: 2px;
+        margin: 5px auto;
+        display: block;
+        background:  $brand-clr;
+        transition: all 0.18s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+        transition-delay: 0.18s;
+        transform: none;
+      }
+      &.active {
+          .hamburger-btn{
+          margin: 15px 0;
+      }
+        span {
+          transition: all 0.18s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+          transition-delay: 0.18s;
+          margin: 0 auto;
+          &:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+          }
+        }
+      }
     }
-    aside + article {
-        width: 100%;
+    &.opened {
+      width: 360px;
+      transition: width 0.2s ease;
+      position: absolute;
+      height: 100%;
+      z-index: 1000;
     }
+  }
+  aside+article {
+    width: 100%;
+    transition: width 0.2s ease;
+  }
+  .overlay {
+    &.opened {
+      display: block;
+    }
+  }
 }

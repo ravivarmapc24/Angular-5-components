@@ -121,6 +121,7 @@
 <router-outlet></router-outlet>
 -->
 <div class="layout container-fluid p-0">
+  <div class="overlay" [ngClass]="{'opened': isMenuOpened }"></div>
   <header>
 
     <div class="px-3 py-2 d-flex justify-content-between">
@@ -140,11 +141,18 @@
   </header>
 
   <main>
-    <aside>
-
+    <aside [ngClass]="{'opened': isMenuOpened }">
+      <div class="resizer" [ngClass]="{'active': isMenuOpened }" (click)="toggleNavbar($event)">
+        <div class="hamburger-btn">
+            <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        
+      </div>
     </aside>
     <article>
-
+      Check the issue
     </article>
   </main>
 </div>

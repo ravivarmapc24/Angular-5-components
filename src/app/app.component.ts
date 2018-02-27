@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  isMenuOpened = false;
   title = 'app';
  foods = [
     {value: 'steak-0', viewValue: 'Steak'},
@@ -31,4 +32,10 @@ export class AppComponent {
     req.send();
 
   }
+
+  toggleNavbar(event) {
+        this.isMenuOpened = !this.isMenuOpened;
+        event.preventDefault();
+  }
+
 }
