@@ -80,16 +80,10 @@ button {
   border: 1px solid $primary-btn-active-clr;
   padding: 2px 15px;
   border-radius: $btn-border-radius;
-  position: relative;
-  top: 10px;
   font-family: $primary-btn-font;
-  margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: $primary-btn-active-clr;
-  &:first-of-type {
-    margin-right: 10px;
-  }
   &:hover,
   &:active,
   &:focus {

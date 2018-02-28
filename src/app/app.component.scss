@@ -140,16 +140,11 @@ main {
 .box-container {
     width: 100%;
     padding: 2rem 0;
-    float: left;
-    position: relative;
     .main-box-header{
-        h1{
-            float: left;
-            width: 100%;
-            position: relative;
-            font-size: 26px;
+        div{
+            font-size: 20px;
             margin: 0;
-            padding: 1rem 0 2rem;
+            padding: 0 0 20px;
             .custom-popover-cls{
                 border-radius: 100%;
                 padding: 2px 10px;
@@ -159,10 +154,8 @@ main {
         }
     }
     .box-container-in {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         width: 100%;
-        float: left;
-        position: relative; 
         padding: .5rem 1rem 0;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -170,12 +163,11 @@ main {
     .sub-head {
         font-size: 13px;
         color: $brand-clr-ltr;
-        font-weight: bold;
+        font-family: $font-semibold;
     }
     .head {
         font-size: 16px;
         color: $accent-dkr;
-        font-weight: bold;
         .custom-popover-cls{
             font-weight: bold;
             padding: 1px 9px;
@@ -211,14 +203,12 @@ main {
                     &:after{
                         background-color: $white;
                     }
+
                 }
             }
         }
     }
     .summary-sect {
-        width: 100%;
-        float: left;
-        position: relative;
         padding-bottom: 1rem;
         >div {
             &:nth-child(1) {
@@ -238,16 +228,6 @@ main {
 
 /* Right article -Rate Quote CSS */
 .rate-quote-header{
-    width:100%;
-    float: left;
-    position: relative;
-    .lft-sect{
-        h1{
-            padding: 15px 0 0;
-            margin: 0;
-            font-size: 26px;
-        }
-    }
     .rt-sect{
         .filter-btn{
             span.badge{
