@@ -108,9 +108,11 @@ aside {
   background-color: $aside-bg-clr;
   width: 360px;
   transition: all 0.5s ease;
-  padding: 15px;
   .resizer {
     display: none;
+  }
+  .input-section {
+      padding: 15px;
   }
 }
 
@@ -332,6 +334,10 @@ main {
     &.opened {
       width: 360px;
       transform: translateX(0px);
+    }
+    .input-section {
+        height: calc(100vh - 67px);
+        overflow: auto;
     }
   }
   aside+article {
