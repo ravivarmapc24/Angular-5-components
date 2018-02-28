@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  renderer: any;
 
   isMenuOpened: boolean = false;
   cities = [
@@ -41,9 +42,13 @@ export class AppComponent {
     req.send();
 
   }
-  toggleNavbar(event) {
+  toggleNavbar() {
     this.isMenuOpened = !this.isMenuOpened;
-    event.preventDefault();
+    if (this.isMenuOpened) {
+      document.body.className = 'modal-open';
+      } else {
+      document.body.className = '';
+      } 
   }
 
 }

@@ -1,9 +1,6 @@
-
-
-
-
 @import 'styles.scss';
 @import './../assets/styles/mixins.scss';
+
 
 /* Layout */
 
@@ -43,7 +40,7 @@ header {
       display: block;
       position: absolute;
       @include width-height(100%, 4px);
-     background: $brand-clr;
+      background: $brand-clr;
       border-radius: 9px;
       opacity: 1;
       left: 0;
@@ -112,7 +109,7 @@ aside {
     display: none;
   }
   .input-section {
-      padding: 15px;
+    padding: 15px;
   }
 }
 
@@ -134,175 +131,166 @@ main {
   position: relative;
 }
 
-
 /* Right article - Box container css  */
 
 .box-container {
+  width: 100%;
+  padding: 2rem 0;
+  float: left;
+  position: relative;
+  .main-box-header {
+    h1 {
+      float: left;
+      width: 100%;
+      position: relative;
+      font-size: 26px;
+      margin: 0;
+      padding: 1rem 0 2rem;
+    }
+    .color-accent-dkr{
+        display: inline-block;
+    }
+    .fa-question {
+      padding: 3px 6px;
+      border: 1px solid #ccc;
+      border-radius: 100%;
+      font-size: 18px;
+      color: $accent-lt;
+    }
+  }
+  .box-container-in {
+    margin-bottom: 30px;
+    padding: .5rem 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .fa-question {
+      padding: 3px 6px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 100%;
+      color: $accent-lt;
+    }
+  }
+  .sub-head {
+    font-size: 13px;
+    color: $brand-clr-ltr;
+    font-family: $font-semibold;
+  }
+  .head {
+    font-size: 16px;
+    color: $accent-dkr;
+    .custom-popover-cls {}
+  }
+  .header-btn {
+    button {
+      .view-detail-btn {
+        &:after {
+          content: "";
+          width: 1px;
+          height: 13px;
+          background-color: $brand-clr;
+          left: 0;
+          position: relative;
+          display: inline-block;
+          top: 1px;
+          margin-left: 10px;
+          margin-right: 7px;
+        }
+      }
+      &:hover {
+        .view-detail-btn {
+          &:after {
+            background-color: $white;
+          }
+        }
+      }
+    }
+    i {
+      font-size: 21px;
+      top: 2px;
+      position: relative
+    }
+  }
+  .summary-sect {
     width: 100%;
-    padding: 2rem 0;
     float: left;
     position: relative;
-    .main-box-header{
-        h1{
-            float: left;
-            width: 100%;
-            position: relative;
-            font-size: 26px;
-            margin: 0;
-            padding: 1rem 0 2rem;
-            .custom-popover-cls{
-               i{
-
-               }
-            }
-        }
-        .fa-question{
-            padding: 3px 6px;
-            border: 1px solid #ccc;
-            border-radius: 100%;
-            font-size: 18px;
-            color: $accent-lt;
-        }
-    }
-    .box-container-in {
-        margin-bottom: 30px;
-        width: 100%;
-        float: left;
-        position: relative; 
-        padding: .5rem 1rem 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        .fa-question{
-            padding: 3px 6px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 100%;
-            color: $accent-lt;
-        }
-    }
-    .sub-head {
+    padding-bottom: 1rem;
+    >div {
+      &:nth-child(1) {
+        color: $accent-lt;
         font-size: 13px;
-        color: $brand-clr-ltr;
-        font-family: $font-semibold;
-    }
-    .head {
-        font-size: 16px;
+        font-weight: bold;
+      }
+      &:nth-child(2) {
         color: $accent-dkr;
-        .custom-popover-cls{
-            
-        }
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 12px;
+      }
     }
-    .header-btn{
-        button{
-            .view-detail-btn{
-                &:after{
-                    content: "";
-                    width: 1px;
-                    height: 13px;
-                    background-color: $brand-clr;
-                    left: 0;
-                    position: relative;
-                    display: inline-block;
-                    top: 1px;
-                    margin-left: 10px;
-                    margin-right: 7px;
-                }
-            }
-            &:hover{
-                .view-detail-btn{
-                    &:after{
-                        background-color: $white;
-                    }
-                }
-            }
-        }
-        i{
-            font-size: 21px;
-            top: 2px;
-            position: relative
-        }
-    }
-    .summary-sect {
-        width: 100%;
-        float: left;
-        position: relative;
-        padding-bottom: 1rem;
-        >div {
-            &:nth-child(1) {
-                color: $accent-lt;
-                font-size: 13px;
-                font-weight: bold;
-            }
-            &:nth-child(2) {
-                color: $accent-dkr;
-                font-size: 16px;
-                font-weight: bold;
-                line-height: 12px;
-            }
-        }
-    }
+  }
 }
 
 /* Right article -Rate Quote CSS */
-.rate-quote-header{
-    width:100%;
-    float: left;
-    position: relative;
-    .lft-sect{
-        h1{
-            font-size: 24px;
-        }
-    }
-    .rt-sect{
-        .filter-btn{
-            span.badge{
-                background: $brand-clr;
-                padding: 0.55em .6em;
-                color: $white;
-                margin-left: 10px;
-                &:hover,&:focus,&:active{
-                background: $white;
-                color:  $brand-clr;
-                }
-            }
-            &:hover,&:focus,&:active{ 
-                span.badge{
-                    background: $white;
-                    color:  $brand-clr;
-                }
-            }
-        }
-        i{
-            padding-right: 8px;
-        }
-    }
-    .head-desc{
-        margin: 0;
-        a{
-            text-decoration: underline;
-            font-weight: bold;
-        }
-    }
-}
 
+.rate-quote-header {
+  width: 100%;
+  float: left;
+  position: relative;
+  .lft-sect {
+    h1 {
+      font-size: 24px;
+    }
+  }
+  .rt-sect {
+    .filter-btn {
+      span.badge {
+        background: $brand-clr;
+        padding: 0.55em .6em;
+        color: $white;
+        margin-left: 10px;
+        &:hover,
+        &:focus,
+        &:active {
+          background: $white;
+          color: $brand-clr;
+        }
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        span.badge {
+          background: $white;
+          color: $brand-clr;
+        }
+      }
+    }
+    i {}
+  }
+  .head-desc {
+    margin: 0;
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
 
 /* Filter inner html css */
-.filter-inner-template{
-    ul.nav{
-        li{
-            margin-bottom: 10px;
-            border-radius: 0 !important;
-        }
-    }
-}
 
+.filter-inner-template {
+  ul.nav {
+    li {
+      margin-bottom: 10px;
+      border-radius: 0 !important;
+    }
+  }
+}
 
 /*media queries*/
 
-
-
 @media #{$large} {
-    
   aside {
     transform: translateX(-360px);
     position: fixed;
@@ -313,25 +301,24 @@ main {
       position: absolute;
       top: 0px;
       right: -40px;
-      width: 40px;  
+      width: 40px;
       height: 40px;
       background: $grey-lt;
-      .hamburger-btn{
-          margin: 8px 0;
+      .hamburger-btn {
+        margin: 8px 0;
       }
       span {
-        &:after{
-            content: "\F105";
-            font-family: FontAwesome;
-            position: absolute;
-            font-size: 43px;
-            top: 3px;
-            left: 15px;
-            -webkit-transition: all 2s ease-in-out;
-            transition: all 2s ease-in-out;
-            color: $brand-clr;
+        &:after {
+          content: "\F105";
+          font-family: FontAwesome;
+          position: absolute;
+          font-size: 43px;
+          top: 3px;
+          left: 15px;
+          @include browserprefix(transition, .5s ease-in-out);
+          color: $brand-clr;
         }
-      /*  width: 80%;
+        /*  width: 80%;
         height: 2px;
         margin: 5px auto;
         display: block;
@@ -341,21 +328,14 @@ main {
         transform: none;*/
       }
       &.active {
-          .hamburger-btn{
+        .hamburger-btn {
           margin: 15px 0;
-      }
+        }
         span {
-            &:after{
-                content: "\f104";
-                font-family: FontAwesome;
-                position: absolute;
-                font-size: 43px;
-                top: 3px;
-                left: 15px;
-                
-            }
-           
-         /* transition: all 0.3s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+          &:after {
+            @include browserprefix(transform, rotate(180deg));
+          }
+          /* transition: all 0.3s cubic-bezier(0.810, -0.330, 0.345, 1.375);
           transition-delay: 0.3s;
           margin: 0 auto;
           &:first-of-type {
@@ -375,8 +355,8 @@ main {
       transform: translateX(0px);
     }
     .input-section {
-        height: calc(100vh - 67px);
-        overflow: auto;
+      height: calc(100vh - 67px);
+      overflow: auto;
     }
   }
   aside+article {
@@ -389,11 +369,10 @@ main {
   }
 }
 
-
-@media #{$small} { 
-    aside {
-        &.opened {
-            width: 320px;
-        }
+@media #{$small} {
+  aside {
+    &.opened {
+      width: 320px;
     }
+  }
 }
