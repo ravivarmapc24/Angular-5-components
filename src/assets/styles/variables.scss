@@ -18,7 +18,7 @@ $transparent: transparent;
 /* Brand Color Shades */
 $brand-clr: #0865a8;
 $brand-clr-secondary: #09357A;
-$brand-clr-lt: #407DB0;
+$brand-clr-lt: #74A5CD;
 $brand-clr-ltr: #07B6F8;
 $brand-clr-dk: #0077B3;
 
@@ -69,6 +69,11 @@ $navpill-active-clr: $white;
 $navpill-bg-clr: $white;
 $navpill-clr: $brand-clr;
 $navpill-border-clr: $brand-clr;
+
+/*Radio button*/
+
+$radio-clr: $accent-dk;
+$radio-active-clr: $brand-clr-lt;
 
 /*Media Queries Config*/
 
