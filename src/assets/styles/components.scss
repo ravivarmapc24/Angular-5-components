@@ -1,0 +1,38 @@
+/*Components styling go here*/
+
+
+/*Input*/
+
+input[type=text] {
+    display: block;
+    width: 100%;
+    border-width: 2px;
+   border: 1px solid $border-input;
+    background: transparent;
+}
+
+
+/*Nav Pills*/
+
+.nav-pills .nav-item{
+    color: $navpill-clr;
+    background-color: $navpill-bg-clr;
+    border: 1px solid $navpill-border-clr;
+	padding:0 !important;
+	}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: $navpill-active-clr;
+    background-color: $navpill-active-bg-clr;
+}
+.nav-pills li.nav-item:last-child {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.nav-pills li.nav-item:first-child {
+    border-radius: 4px 0px 0px 4px;
+}
+.nav-pills .nav-link {
+    border-radius: 0 !important;
+	color:$navpill-active-bg-clr;
+} 
+ 
