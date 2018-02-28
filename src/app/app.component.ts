@@ -9,6 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   isMenuOpened: boolean = false;
+  cities = [
+    {id: 1, name: 'Option 1'},
+    {id: 2, name: 'Option 2'},
+    {id: 3, name: 'Option 3'},
+    {id: 3, name: 'Option 4'},
+    {id: 3, name: 'Option 5'}
+];
   title = 'app';
   foods = [
     { value: 'steak-0', viewValue: 'Steak' },

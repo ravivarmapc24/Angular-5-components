@@ -149,11 +149,19 @@ main {
             margin: 0;
             padding: 1rem 0 2rem;
             .custom-popover-cls{
-                border-radius: 100%;
-                padding: 2px 10px;
-                position: relative;
-                top: -2px;
+               i{
+
+               }
             }
+        }
+        .fa-question{
+            padding: 3px 6px;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+            font-size: 18px;
+            position: relative;
+            top: -3px;
+            color: $accent-lt;
         }
     }
     .box-container-in {
@@ -164,6 +172,13 @@ main {
         padding: .5rem 1rem 0;
         border: 1px solid #ccc;
         border-radius: 5px;
+        .fa-question{
+            padding: 3px 6px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+            color: $accent-lt;
+        }
     }
     .sub-head {
         font-size: 13px;
@@ -175,17 +190,7 @@ main {
         color: $accent-dkr;
         font-weight: bold;
         .custom-popover-cls{
-            font-weight: bold;
-            padding: 1px 9px;
-            border: 1px solid #ccc; 
-            border-radius: 100%;
-            position: relative;
-            top: -2px;
-            margin-left: 5px;
-            color:$accent-dkr;
-            &:hover{
-                color: $white;
-            }
+            
         }
     }
     .header-btn{
@@ -211,6 +216,9 @@ main {
                     }
                 }
             }
+        }
+        i{
+            font-size: 13px;
         }
     }
     .summary-sect {
@@ -265,6 +273,9 @@ main {
                 }
             }
         }
+        i{
+            padding-right: 8px;
+        }
     }
     .head-desc{
         margin: 0;
@@ -275,6 +286,16 @@ main {
     }
 }
 
+
+/* Filter inner html css */
+.filter-inner-template{
+    ul.nav{
+        li{
+            margin-bottom: 10px;
+            border-radius: 0 !important;
+        }
+    }
+}
 
 
 /*media queries*/
@@ -300,21 +321,42 @@ main {
           margin: 8px 0;
       }
       span {
-        width: 80%;
+        &:after{
+            content: "\F105";
+            font-family: FontAwesome;
+            position: absolute;
+            font-size: 43px;
+            top: 3px;
+            left: 15px;
+            -webkit-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+            color: $brand-clr;
+        }
+      /*  width: 80%;
         height: 2px;
         margin: 5px auto;
         display: block;
         background:  $brand-clr;
         transition: all 0.3s cubic-bezier(0.810, -0.330, 0.345, 1.375);
         transition-delay: 0.3s;
-        transform: none;
+        transform: none;*/
       }
       &.active {
           .hamburger-btn{
           margin: 15px 0;
       }
         span {
-          transition: all 0.3s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+            &:after{
+                content: "\f104";
+                font-family: FontAwesome;
+                position: absolute;
+                font-size: 43px;
+                top: 3px;
+                left: 15px;
+                
+            }
+           
+         /* transition: all 0.3s cubic-bezier(0.810, -0.330, 0.345, 1.375);
           transition-delay: 0.3s;
           margin: 0 auto;
           &:first-of-type {
@@ -325,7 +367,7 @@ main {
           }
           &:last-of-type {
             transform: rotate(-45deg) translate(1px, -1px);
-          }
+          }*/
         }
       }
     }
