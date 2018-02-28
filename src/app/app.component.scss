@@ -108,9 +108,11 @@ aside {
   background-color: $aside-bg-clr;
   width: 360px;
   transition: all 0.5s ease;
-  padding: 15px;
   .resizer {
     display: none;
+  }
+  .input-section {
+      padding: 15px;
   }
 }
 
@@ -159,8 +161,6 @@ main {
             border: 1px solid #ccc;
             border-radius: 100%;
             font-size: 18px;
-            position: relative;
-            top: -3px;
             color: $accent-lt;
         }
     }
@@ -183,12 +183,11 @@ main {
     .sub-head {
         font-size: 13px;
         color: $brand-clr-ltr;
-        font-weight: bold;
+        font-family: $font-semibold;
     }
     .head {
         font-size: 16px;
         color: $accent-dkr;
-        font-weight: bold;
         .custom-popover-cls{
             
         }
@@ -218,7 +217,9 @@ main {
             }
         }
         i{
-            font-size: 13px;
+            font-size: 21px;
+            top: 2px;
+            position: relative
         }
     }
     .summary-sect {
@@ -249,9 +250,7 @@ main {
     position: relative;
     .lft-sect{
         h1{
-            padding: 15px 0 0;
-            margin: 0;
-            font-size: 26px;
+            font-size: 24px;
         }
     }
     .rt-sect{
@@ -374,6 +373,10 @@ main {
     &.opened {
       width: 360px;
       transform: translateX(0px);
+    }
+    .input-section {
+        height: calc(100vh - 67px);
+        overflow: auto;
     }
   }
   aside+article {

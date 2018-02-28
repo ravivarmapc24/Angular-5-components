@@ -55,46 +55,80 @@ input[type=text] {
     color: $radio-clr;
     font-family: $font-default;
   }
-  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
-      border-color: $radio-active-clr;
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: $radio-active-clr;
   }
   .mat-radio-button.mat-accent .mat-radio-inner-circle {
-      background: $radio-active-clr;
+    background: $radio-active-clr;
   }
   .mat-radio-checked {
-      .mat-radio-label-content{
-        color: $radio-active-clr;
-      }
+    .mat-radio-label-content {
+      color: $radio-active-clr;
+    }
   }
-  .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element{background-color: $radio-active-clr; opacity: 0.26;}
+  .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: $radio-active-clr;
+    opacity: 0.26;
+  }
 }
 
 
 /* Button CSS */
-button{
-    background: none;
-    border: 1px solid $brand-clr;
-    padding: 2px 15px;
-    border-radius: 4px;
-    position: relative;
-    top: 10px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    color: $brand-clr; 
-    &:first-of-type{
-        margin-right: 10px;
+
+button {
+  background: none;
+  border: 1px solid $primary-btn-active-clr;
+  padding: 2px 15px;
+  border-radius: $btn-border-radius;
+  font-family: $primary-btn-font;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: $primary-btn-active-clr;
+  &:hover,
+  &:active,
+  &:focus {
+    background: $primary-btn-active-clr;
+    border: 1px solid $primary-btn-active-clr;
+    color: $primary-btn-clr;
+    span.badge {
+      background: $primary-btn-clr;
+      color: $primary-btn-active-clr;
     }
+  }
+  /*secondary button*/
+  &.btn-secondary {
+    border: 1px solid $secondary-btn-active-clr;
+    color: $secondary-btn-active-clr;
+    font-family: $secondary-btn-font;
     &:hover,
     &:active,
     &:focus {
-        background: $brand-clr;
-        border: 1px solid $brand-clr;
-        color: $white;
-        span.badge{
-            background: $white;
-            color:  $brand-clr;
+      background: $secondary-btn-active-clr;
+      border: 1px solid $secondary-btn-active-clr;
+      color: $secondary-btn-clr;
+      span.badge {
+        background: $secondary-btn-clr;
+        color: $secondary-btn-active-clr;
+      }
+    }
+    /*secondary btn inverse*/
+    &.inverse {
+        color: $secondary-btn-clr;
+        font-family: $secondary-btn-font;
+        background: $secondary-btn-active-clr;
+        &:hover,
+        &:active,
+        &:focus {
+        background: $secondary-btn-clr;
+        border: 1px solid $secondary-btn-active-clr;
+        color: $secondary-btn-active-clr;
+        background: transparent;
+        outline: none;
+        span.badge {
+            background: $secondary-btn-active-clr;
+            color: $secondary-btn-clr;
         }
     }
+  }
+  }
 }
