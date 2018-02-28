@@ -107,7 +107,7 @@ aside {
   position: relative;
   background-color: $aside-bg-clr;
   width: 360px;
-  transition: width 0.5s ease;
+  transition: all 0.5s ease;
   padding: 15px;
   .resizer {
     display: none;
@@ -284,7 +284,7 @@ main {
 @media #{$large} {
     
   aside {
-    width: 0px;
+    transform: translateX(-360px);
     position: fixed;
     height: 100%;
     z-index: 1000;
@@ -331,6 +331,7 @@ main {
     }
     &.opened {
       width: 360px;
+      transform: translateX(0px);
     }
   }
   aside+article {

@@ -4,37 +4,71 @@
 /*Input*/
 
 input[type=text] {
-    display: block;
-    width: 100%;
-    border-width: 2px;
-   border: 1px solid $border-input;
-    background: transparent;
+  display: block;
+  width: 100%;
+  border-width: 2px;
+  border: 1px solid $border-input;
+  background: transparent;
 }
 
 
 /*Nav Pills*/
 
-.nav-pills .nav-item{
-    color: $navpill-clr;
-    background-color: $navpill-bg-clr;
-    border: 1px solid $navpill-border-clr;
-	padding:0 !important;
-	}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: $navpill-active-clr;
-    background-color: $navpill-active-bg-clr;
+.nav-pills .nav-item {
+  color: $navpill-clr;
+  background-color: $navpill-bg-clr;
+  border: 1px solid $navpill-border-clr;
+  padding: 0 !important;
+  font-size: 14px;
 }
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: $navpill-active-clr;
+  background-color: $navpill-active-bg-clr;
+}
+
 .nav-pills li.nav-item:last-child {
-    border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .nav-pills li.nav-item:first-child {
-    border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
 }
+
 .nav-pills .nav-link {
-    border-radius: 0 !important;
-	color:$navpill-active-bg-clr;
+  border-radius: 0 !important;
+  color: $navpill-active-bg-clr;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
+
+
+/*Radio button*/
+
+.radio {
+  .mat-radio-outer-circle {
+    border-width: 1px;
+    border-color: $radio-clr;
+  }
+  .mat-radio-label-content {
+    color: $radio-clr;
+    font-family: $font-default;
+  }
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+      border-color: $radio-active-clr;
+  }
+  .mat-radio-button.mat-accent .mat-radio-inner-circle {
+      background: $radio-active-clr;
+  }
+  .mat-radio-checked {
+      .mat-radio-label-content{
+        color: $radio-active-clr;
+      }
+  }
+  .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element{background-color: $radio-active-clr; opacity: 0.26;}
+}
+
 
 /* Button CSS */
 button{
@@ -64,4 +98,3 @@ button{
         }
     }
 }
- 
