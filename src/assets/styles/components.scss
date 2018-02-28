@@ -34,5 +34,34 @@ input[type=text] {
 .nav-pills .nav-link {
     border-radius: 0 !important;
 	color:$navpill-active-bg-clr;
-} 
+}
+
+/* Button CSS */
+button{
+    background: none;
+    border: 1px solid $brand-clr;
+    padding: 2px 15px;
+    border-radius: 4px;
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    color: $brand-clr; 
+    &:first-of-type{
+        margin-right: 10px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background: $brand-clr;
+        border: 1px solid $brand-clr;
+        color: $white;
+        span.badge{
+            background: $white;
+            color:  $brand-clr;
+        }
+    }
+}
  

@@ -156,25 +156,6 @@ main {
             }
         }
     }
-    .header-btn{
-        button {
-            background: none;
-            border: 1px solid $brand-clr-secondary;
-            padding: 2px 15px;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-            color: $brand-clr-secondary;
-            &:hover,
-            &:active,
-            &:focus {
-                background: $brand-clr-secondary;
-                border: 1px solid $brand-clr-secondary;
-                color: $white;
-            }
-        }
-    }
     .box-container-in {
         margin-bottom: 30px;
         width: 100%;
@@ -204,6 +185,31 @@ main {
             color:$accent-dkr;
             &:hover{
                 color: $white;
+            }
+        }
+    }
+    .header-btn{
+        button{
+            .view-detail-btn{
+                &:after{
+                    content: "";
+                    width: 1px;
+                    height: 13px;
+                    background-color: $brand-clr;
+                    left: 0;
+                    position: relative;
+                    display: inline-block;
+                    top: 1px;
+                    margin-left: 10px;
+                    margin-right: 7px;
+                }
+            }
+            &:hover{
+                .view-detail-btn{
+                    &:after{
+                        background-color: $white;
+                    }
+                }
             }
         }
     }
@@ -241,40 +247,22 @@ main {
         }
     }
     .rt-sect{
-        float: right;
-        button{
-            background: none;
-            border: 1px solid $brand-clr;
-            padding: 2px 15px;
-            border-radius: 4px;
-            position: relative;
-            top: 10px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-            color: $brand-clr; 
-            &:first-of-type{
-                margin-right: 10px;
-            }
-            &:hover,
-            &:active,
-            &:focus {
-                background: $brand-clr;
-                border: 1px solid $brand-clr;
-                color: $white;
-                span.badge{
-                    background: $white;
-                    color:  $brand-clr;
-                }
-            }
-        }
         .filter-btn{
             span.badge{
                 background: $brand-clr;
                 padding: 0.55em .6em;
                 color: $white;
                 margin-left: 10px;
+                &:hover,&:focus,&:active{
+                background: $white;
+                color:  $brand-clr;
+                }
+            }
+            &:hover,&:focus,&:active{ 
+                span.badge{
+                    background: $white;
+                    color:  $brand-clr;
+                }
             }
         }
     }
