@@ -84,9 +84,7 @@ button {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: $primary-btn-active-clr;
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
     background: $primary-btn-active-clr;
     border: 1px solid $primary-btn-active-clr;
     color: $primary-btn-clr;
@@ -95,14 +93,16 @@ button {
       color: $primary-btn-active-clr;
     }
   }
+  &:active,&:focus {
+        box-shadow: none;
+        outline: none;
+    }
   /*secondary button*/
   &.btn-secondary {
     border: 1px solid $secondary-btn-active-clr;
     color: $secondary-btn-active-clr;
     font-family: $secondary-btn-font;
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover{
       background: $secondary-btn-active-clr;
       border: 1px solid $secondary-btn-active-clr;
       color: $secondary-btn-clr;
@@ -110,15 +110,18 @@ button {
         background: $secondary-btn-clr;
         color: $secondary-btn-active-clr;
       }
+      
+    }
+    &:active,&:focus {
+        box-shadow: none;
+        outline: none;
     }
     /*secondary btn inverse*/
     &.inverse {
         color: $secondary-btn-clr;
         font-family: $secondary-btn-font;
         background: $secondary-btn-active-clr;
-        &:hover,
-        &:active,
-        &:focus {
+        &:hover {
         background: $secondary-btn-clr;
         border: 1px solid $secondary-btn-active-clr;
         color: $secondary-btn-active-clr;
@@ -128,6 +131,10 @@ button {
             background: $secondary-btn-active-clr;
             color: $secondary-btn-clr;
         }
+    }
+    &:active,&:focus {
+        box-shadow: none;
+        outline: none;
     }
   }
   }
