@@ -49,7 +49,7 @@ $app-clr: $accent-dk;
 $disabled: $grey-dk;
 
 /* Aside */
-$aside-bg-clr: $grey-lt;
+$aside-bg-clr: $brand-clr;
 
 /* Label */
 $label-clr: $accent-dk;
@@ -70,6 +70,7 @@ $muted-white: $grey-dk;
 /*Input*/
 
 $border-input: $accent-lt;
+$txtbox-bg-clr: $white;
 
 /*Nav Pills*/
 
@@ -95,6 +96,11 @@ $btn-border-radius: 4px;
 $secondary-btn-active-clr: $brand-clr-secondary;
 $secondary-btn-font: $font-semibold;
 $secondary-btn-clr: $white;
+
+/*tertiary button*/
+$tertiary-btn-active-clr: $white;
+$tertiary-btn-font: $font-semibold;
+$tertiary-btn-clr: $brand-clr;
 
 /*Media Queries Config*/
 

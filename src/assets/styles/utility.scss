@@ -118,6 +118,9 @@ label {
 .border-bottom-white {
     border-bottom: 1px solid $white;
 }
+.border-bottom-color-lt {
+    border-bottom: 1px solid $accent-lt;
+}
 .border-brand-color-lt {
     border: 1px solid $brand-clr-lt;
 }

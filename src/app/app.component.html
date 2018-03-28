@@ -152,7 +152,7 @@
           <li class="nav-item">
             <a class="nav-link txt-size-xxs semi-bold" href="#">ABOUT US</a>
           </li>
-           <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link txt-size-xxs semi-bold" href="#">CONTACT ME</a>
           </li>
           <!--<li class="nav-item dropdown">
@@ -179,8 +179,8 @@
 
   </header>
 
-  <main>
-    <aside [ngClass]="{'opened': isMenuOpened }">
+  <main class="p-xl-4">
+    <aside class="rounded-xl" [ngClass]="{'opened': isMenuOpened }">
       <div class="resizer" [ngClass]="{'active': isMenuOpened }" (click)="toggleNavbar()">
         <div class="hamburger-btn">
           <span></span>
@@ -188,7 +188,7 @@
 
       </div>
       <div class="input-section">
-        <h4 class="semi-bold txt-size-md">Change your Inputs</h4>
+        <h4 class="semi-bold txt-size-md color-white text-center">Your Loan Inputs</h4>
         <div class="mt-4 mb-2">
           <ul class="nav nav-pills">
             <li class="nav-item">
@@ -200,37 +200,74 @@
           </ul>
         </div>
         <div class="mt-2">
-          <label class="mb-0">Zip Code</label>
-          <input type="text" class="rounded px-2" name="Zip Code">
+          <label class="mb-0">City | Country | State | Zip Code</label>
+          <input type="text" class="rounded px-2" name="Zip Code" placeholder="Enter Zip Code">
         </div>
         <div class="mt-2">
-          <label class="mb-0">Purchase Price</label>
-          <input type="text" class="rounded px-2" name="Purchase Price">
+          <label class="mb-0">Property Type</label>
+          <ng-select class="rounded"
+                    [items]="Uioptions"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select"
+                   [typeahead]="typeahead"
+                   [(ngModel)]="selecteduioptionsId">
+        </ng-select>
         </div>
-        <div class="d-flex align-items-end mt-2">
-          <div class="w-75 mr-3">
-            <label class="mb-0">Down Payment</label>
-            <input type="text" class="rounded px-2" name="Down Payment">
-          </div>
-          <div class="w-25">
-            <input type="text" class="rounded px-2" name="Down Payment">
-          </div>
+         <div class="mt-2">
+          <label class="mb-0">Property Use</label>
+          <ng-select class="rounded"
+                    [items]="options2"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select"
+                   [typeahead]="typeahead"
+                   [(ngModel)]="selecteduioptionsId">
+        </ng-select>
         </div>
-        <div class="">
-          <label class="txt-size-xxs mb-0 mt-4">Credit Score</label>
-          <div class="radio">
-            <mat-radio-group>
-              <mat-radio-button class="d-block" value="1">800+</mat-radio-button>
-              <mat-radio-button class="d-block" value="2">740 - 799</mat-radio-button>
-              <mat-radio-button class="d-block" value="3">670 - 739</mat-radio-button>
-              <mat-radio-button class="d-block" value="4">580 - 669</mat-radio-button>
-              <mat-radio-button class="d-block" value="5">570 or lower</mat-radio-button>
-              <mat-radio-button class="d-block" value="6">Custom</mat-radio-button>
-            </mat-radio-group>
-          </div>
+         <div class="mt-2">
+          <label class="mb-0">Loan Type</label>
+          <ng-select class="rounded"
+                    [items]="options3"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select"
+                   [typeahead]="typeahead"
+                   [(ngModel)]="selecteduioptionsId">
+        </ng-select>
         </div>
-        <div class="my-2">
-          <button class="btn-secondary inverse w-100"> 
+        <div class="mt-2">
+          <label class="mb-0">Property Value</label>
+          <input type="text" class="rounded px-2" name="Property Value" placeholder="Enter Property Price">
+        </div>
+        <div class="mt-2">
+          <label class="mb-0">Current Mortgage Balance</label>
+          <input type="text" class="rounded px-2" name="Mortgage Balance" placeholder="Enter Mortgage Balance">
+        </div>
+         <div class="mt-2">
+          <label class="mb-0">Credit Score</label>
+          <ng-select class="rounded"
+                    [items]="options4"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select"
+                   [typeahead]="typeahead"
+                   [(ngModel)]="selecteduioptionsId">
+        </ng-select>
+        </div>
+         <div class="mt-2">
+          <label class="mb-0">Locked Period</label>
+          <ng-select class="rounded"
+                    [items]="options5"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select"
+                   [typeahead]="typeahead"
+                   [(ngModel)]="selecteduioptionsId">
+        </ng-select>
+        </div>
+        <div class="my-4">
+          <button class="btn-tertiary inverse w-100 p-2 border-rad-25"> 
                   Get Your Quotes 
                 </button>
         </div>
@@ -284,57 +321,74 @@
 
       </div>
       <div class="box-container">
-        <div class="box-container-in px-3 py-2">
-          <div>
-            <label class="sub-head m-0">
-                Lowest APR
+        <div class="box-container-in p-2">
+            <!-- <div>
+              <label class="sub-head m-0">
+                  Lowest APR
               </label>
-          </div>
-          <div class="d-flex w-100 py-1 justify-content-between align-items-center">
-            <div class="head">
-              <span class="color-accent-dkr">30 Yr Fixed</span> <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-question"></i></span>
-
+            </div> -->
+            <div class="d-flex w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
+              <div class="head">
+                <span class="color-white">30-year Fixed Conventional</span> 
+                <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-2"></i></span>
+                <span class="px-2  border-left color-white txt-size-xs">Lowest Down Payment</span>
+              </div>
+              <div class="header-btn">
+                <!-- <button class="btn-secondary"> 
+                    <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
+                </button> -->
+                <span class="color-white border-bottom txt-size-xs">See Details</span>
+              </div>
             </div>
-            <div class="header-btn">
-              <button class="btn-secondary"> 
-                  <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                </button>
+            <div class="d-flex w-100 p-3 justify-content-xl-between flex-column flex-md-row">
+              
+              <!-- <div class="summary-sect">
+                <div>RATE</div>
+                <div>4.275%</div>
+              </div>
+              <div class="summary-sect">
+                <div>APR</div>
+                <div>4.275%</div>
+              </div>
+              <div class="summary-sect">
+                <div>MO. PAYMENT</div>
+                <div>4.275%</div>
+              </div>
+              <div class="summary-sect">
+                <div>CLOSING COST</div>
+                <div>4.275%</div>
+              </div>
+              <div class="summary-sect">
+                <div>LENDER FEES</div>
+                <div>4.275%</div>
+              </div> -->
+              <div class="d-inline-flex justify-content-between align-items-center w-75">
+                <div class="summary-sect p-3">
+                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
+                </div>
+                <div class="summary-sect p-3 border-left">
+                    <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                    <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
+                </div>
+                <div class="summary-sect p-3 border-left">
+                    <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                    <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
+                </div>
+                <div class="summary-sect p-3 border-left">
+                    <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                    <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
+                </div>                                 
+              </div>
+              <div class="mt-4">
+                <i class="fa fa-envelope-o txt-size-md align-middle color-brand-dk"></i>
+                <button class="btn btn-primary my-2 my-sm-0 login-btn">Discuss Quote</button>
+              </div>
             </div>
-          </div>
-
-
-          <div class="d-flex w-100 pt-2 justify-content-xl-between flex-column flex-md-row">
-            <div class="summary-sect">
-              <div>RATE</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>APR</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>MO. PAYMENT</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>CLOSING COST</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>LENDER FEES</div>
-              <div>4.275%</div>
-            </div>
-          </div>
-
-          <!--div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                  <div class="summary-sect">
-                    <button> 
-                              <span class=" d-sm-inline-block d-md-none d-lg-none d-xl-inline-block">View Details |</span> <span>></span> 
-                            </button>
-                  </div>
-                </div-->
-
         </div>
+
+
+
 
         <div class="box-container-in px-3 py-2">
           <div>
@@ -508,74 +562,95 @@
   </main>
 
   <footer>
-    <div class="footer-wrapper bg-grey p-4">
-      <div class="row d-flex">
-        <div class="col-lg-3">
-          <div>
-            <label class="color-accent-dk semi-bold txt-size-md">Contact us</label>
-          </div>
-          <div>
-            <label class="color-accent-dk semi-bold m-0">220 Congress Park Drive STE 140 Delray Beach, FL 33445</label>
-            </div>
-            <div>
-              <label class="color-brand semi-bold m-0">customercare@cdmtg.com</label>
-            </div>
-            <div>
-              <label class="color-brand semi-bold txt-size-xsm">+1 (855) 790-7811</label>
-            </div>
-        </div>
-        <div class="col-lg-6 my-3 my-lg-0">
-          <div>
-            <label class="color-accent-dk semi-bold txt-size-md">Company</label>
-          </div>
-          <div class="row d-flex flex-row">
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Purchase</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Tools</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Privacy Policy</a>
+    <div class="site-footer-container footer-wrapper bg-grey mt-xl-5">
+      <div class="site-footer bg-grey">
+        <div class="site-footer-inner">
+          <div class="container-fluid">
+            <div class="row d-flex pb-3 border-bottom-color-lt">
+              <div class="col-lg-3">
+                <div>
+                  <label class="color-accent-dk semi-bold txt-size-md">Contact us</label>
+                </div>
+                <div>
+                  <label class="color-accent-dk semi-bold m-0">220 Congress Park Drive STE 140 Delray Beach, FL 33445</label>
+                </div>
+                <div>
+                  <label class="color-brand semi-bold m-0">customercare@cdmtg.com</label>
+                </div>
+                <div>
+                  <label class="color-brand semi-bold txt-size-xsm">+1 (855) 790-7811</label>
+                </div>
+              </div>
+              <div class="col-lg-6 my-3 my-lg-0">
+                <div>
+                  <label class="color-accent-dk semi-bold txt-size-md">Company</label>
+                </div>
+                <div class="row d-flex flex-row">
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Purchase</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Tools</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Privacy Policy</a>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Refinance</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">About Us</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Terms of Use</a>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Loan Options</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">NMLS Consumer Access</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Disclosures & Licensing</a>
+                  </div>
+                </div>
+                <div>
+                  <label class="color-accent-dk txt-size-sm semi-bold">NMLS# 472433</label>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div>
+                  <label class="color-accent-dk semi-bold txt-size-md">Connect with us</label>
+                </div>
+                <div class="social-media-wrapper">
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-linkedin"></a>
+                  <a href="#" class="fa fa-phone"></a>
+                  <a href="#" class="fa fa-envelope"></a>
+                </div>
+              </div>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Refinance</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">About Us</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Terms of Use</a>
+
+
+            <div class="p-2 d-flex justify-content-between">
+              <div class="copyright-container">
+                <label class="color-accent-dk"></label>
+              </div>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Loan Options</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">NMLS Consumer Access</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-              <a class="color-accent-lt txt-size-xs semi-bold " href="#">Disclosures & Licensing</a>
-            </div>
-          </div>
-          <div>
-            <label class="color-accent-dk txt-size-sm semi-bold">NMLS# 472433</label>
-          </div>
-        </div>
-        <div class="col-lg-3">
-           <div>
-            <label class="color-accent-dk semi-bold txt-size-md">Connect with us</label>
-          </div>
-          <div class="social-media-wrapper">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-phone"></a>
-            <a href="#" class="fa fa-envelope"></a>
+
           </div>
         </div>
       </div>
-
     </div>
   </footer>
+
+
+
+
+
+
 </div>

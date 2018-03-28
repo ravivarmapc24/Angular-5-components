@@ -126,11 +126,15 @@ aside {
   background-color: $aside-bg-clr;
   width: 360px;
   transition: all 0.5s ease;
+  border-radius: 10px;
   .resizer {
     display: none;
   }
   .input-section {
     padding: 15px;
+    label {
+      color : $white;
+    }
   }
 }
 
@@ -322,6 +326,7 @@ main {
     position: fixed;
     height: 100%;
     z-index: 1000;
+    border-radius: 0px;
     .resizer {
       display: inline-block;
       position: absolute;
@@ -329,7 +334,7 @@ main {
       right: -40px;
       width: 40px;
       height: 40px;
-      background: $grey-lt;
+      background: $brand-clr;
       .hamburger-btn {
         margin: 8px 0;
       }
@@ -339,10 +344,10 @@ main {
           font-family: FontAwesome;
           position: absolute;
           font-size: 43px;
-          top: 3px;
+          top: 6px;
           left: 15px;
           @include browserprefix(transition, .5s ease-in-out);
-          color: $brand-clr;
+          color: $white;
         }
         /*  width: 80%;
         height: 2px;
@@ -456,30 +461,9 @@ main {
 
 /*Footer*/
 
-.footer-wrapper {
-  padding: 0.5rem 1rem;
-  .footer-slanted-section{
-        background: #f9f9f9;
-    -webkit-transform: rotate(1.5deg);
-    -moz-transform: rotate(1.5deg);
-    -o-transform: rotate(1.5deg);
-    -ms-transform: rotate(1.5deg);
-    transform: rotate(1.5deg);
-    margin: -70px -50px 0 -50px;
-    padding: 70px 0 50px;
-    .footer-inner-section{
-          -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    -o-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg);
-    }
-
-  }
-}
-
 /*fa icons*/
 .footer-wrapper {
+  padding: 47px 1rem 2.5rem 1rem;
     .fa {
   padding: 10px;
     font-size: 20px;
@@ -505,5 +489,55 @@ main {
 .fa-envelope {
   background: #666666;
 }
-    
+&.site-footer-container {
+  .site-footer {
+    -webkit-transform: rotate(1.5deg);
+	-moz-transform: rotate(1.5deg);
+	-o-transform: rotate(1.5deg);
+	-ms-transform: rotate(1.5deg);
+	transform: rotate(1.5deg);
+     margin: -65px -1rem 0 -1rem;
+    padding: 23px 0px 0 0px;
+  }
+  .site-footer-inner {
+	-webkit-transform: rotate(-1.5deg);
+	-moz-transform: rotate(-1.5deg);
+	-o-transform: rotate(-1.5deg);
+	-ms-transform: rotate(-1.5deg);
+	transform: rotate(-1.5deg);
+   margin: 0 1rem;
+  }
+  
 }
+    @media #{$large} {
+      padding: 1rem;
+      &.site-footer-container {
+  .site-footer {
+    -webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+ margin: 0;
+    padding: 0;
+  }
+  .site-footer-inner {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+  margin: 0;
+  }
+  
+}
+  }
+}
+
+
+
+
+
+
+
+

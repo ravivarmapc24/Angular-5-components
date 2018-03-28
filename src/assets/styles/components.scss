@@ -4,11 +4,17 @@
 /*Input*/
 
 input[type=text] {
-  display: block;
-  width: 100%;
-  border-width: 2px;
-  border: 1px solid $border-input;
-  background: transparent;
+      display: block;
+    width: 100%;
+    border-width: 2px;
+    border: none;
+    background: $txtbox-bg-clr;
+    outline: none;
+    padding: 5px;
+    &:focus,&:active {
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+    }
 }
 
 
@@ -153,4 +159,69 @@ button {
     }
   }
   }
+
+  /*Tertiary Button */
+   &.btn-tertiary {
+    border: 1px solid $tertiary-btn-active-clr;
+    color: $tertiary-btn-active-clr;
+    font-family: $tertiary-btn-font;
+    &.border-rad-25 {
+      border-radius: 25px;
+    }
+    &:hover{
+      background: $tertiary-btn-active-clr;
+      border: 1px solid $tertiary-btn-active-clr;
+      color: $tertiary-btn-clr;
+      span.badge {
+        background: $tertiary-btn-clr;
+        color: $tertiary-btn-active-clr;
+      }
+      
+    }
+    &:active,&:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    /*secondary btn inverse*/
+    &.inverse {
+        color: $tertiary-btn-clr;
+        font-family: $tertiary-btn-font;
+        background: $tertiary-btn-active-clr;
+        &:hover {
+        background: $tertiary-btn-clr;
+        border: 1px solid $tertiary-btn-active-clr;
+        color: $tertiary-btn-active-clr;
+        background: transparent;
+        outline: none;
+        span.badge {
+            background: $tertiary-btn-active-clr;
+            color: $tertiary-btn-clr;
+        }
+    }
+    &:active,&:focus {
+        box-shadow: none;
+        outline: none;
+    }
+  }
+  }
 }
+
+
+/*Select*/
+
+.ng-select input {
+  padding: 0;
+  &:focus,&:active {
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+    }
+}
+.ng-select.focused:not(.opened)>.ng-control{
+    border-color: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0 3px rgba(255,255,255,0.1);
+}
+.ng-select .ng-clear-zone .ng-clear{
+  margin-top: 5px;
+}
+    

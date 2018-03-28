@@ -10,7 +10,28 @@ export class AppComponent {
   renderer: any;
   isHamburgerOpened = false;
   isMenuOpened = false;
-  cities = [
+  options2 = [
+    {id: 1, name: 'Option 1'},
+    {id: 2, name: 'Option 2'},
+    {id: 3, name: 'Option 3'},
+    {id: 3, name: 'Option 4'},
+    {id: 3, name: 'Option 5'}
+];
+options3 = [
+    {id: 1, name: 'Option 1'},
+    {id: 2, name: 'Option 2'},
+    {id: 3, name: 'Option 3'},
+    {id: 3, name: 'Option 4'},
+    {id: 3, name: 'Option 5'}
+];
+options4 = [
+    {id: 1, name: 'Option 1'},
+    {id: 2, name: 'Option 2'},
+    {id: 3, name: 'Option 3'},
+    {id: 3, name: 'Option 4'},
+    {id: 3, name: 'Option 5'}
+];
+options5 = [
     {id: 1, name: 'Option 1'},
     {id: 2, name: 'Option 2'},
     {id: 3, name: 'Option 3'},
@@ -18,9 +39,11 @@ export class AppComponent {
     {id: 3, name: 'Option 5'}
 ];
 Uioptions = [
-        {id: 1, name: 'Primary Residence'},
-        {id: 2, name: 'Secondary Residence'},
-        {id: 3, name: 'Owner'}
+        {id: 1, name: 'User Interface'},
+        {id: 2, name: 'responsive'},
+        {id: 3, name: 'Layout'},
+        {id: 3, name: 'Option 4'},
+        {id: 3, name: 'Option 5'}
     ];
   title = 'app';
   foods = [
@@ -56,7 +79,7 @@ Uioptions = [
       }
   }
   toggleHamburger() {
-    this.isHamburgerOpened = !this.isHamburgerOpened;
+      this.isHamburgerOpened = !this.isHamburgerOpened;
   }
 
 }
