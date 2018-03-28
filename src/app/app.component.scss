@@ -38,7 +38,7 @@ ng-select {
 /* Header css */
 
 header {
-  @include browserprefix(box-shadow, inset 0px -1px 1px 0px rgba(0, 0, 0, .16));
+  /*@include browserprefix(box-shadow, inset 0px -1px 1px 0px rgba(0, 0, 0, .16));*/
   .logo-wrapper {
     height: 51px;
     .logo {

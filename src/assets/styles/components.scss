@@ -162,7 +162,7 @@ button {
 
   /*Tertiary Button */
    &.btn-tertiary {
-    border: 1px solid $tertiary-btn-active-clr;
+    border: 2px solid $tertiary-btn-active-clr;
     color: $tertiary-btn-active-clr;
     font-family: $tertiary-btn-font;
     &.border-rad-25 {
@@ -170,7 +170,7 @@ button {
     }
     &:hover{
       background: $tertiary-btn-active-clr;
-      border: 1px solid $tertiary-btn-active-clr;
+      border: 2px solid $tertiary-btn-active-clr;
       color: $tertiary-btn-clr;
       span.badge {
         background: $tertiary-btn-clr;
@@ -189,7 +189,7 @@ button {
         background: $tertiary-btn-active-clr;
         &:hover {
         background: $tertiary-btn-clr;
-        border: 1px solid $tertiary-btn-active-clr;
+        border: 2px solid $tertiary-btn-active-clr;
         color: $tertiary-btn-active-clr;
         background: transparent;
         outline: none;
