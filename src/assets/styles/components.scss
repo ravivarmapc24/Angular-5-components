@@ -72,6 +72,20 @@ input[type=text] {
   }
 }
 
+/*
+checkbox*/
+
+
+.mat-accent .mat-checkbox-ripple .mat-ripple-element{ background-color: $radio-active-clr;
+    opacity: 0.26;}
+
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+      background-color: $brand-clr;
+    }
+.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element{background-color: $radio-active-clr;
+    opacity: 0.26;}
+
+
 
 /* Button CSS */
 
@@ -84,6 +98,7 @@ button {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   color: $primary-btn-active-clr;
+  white-space: nowrap;
   &:hover {
     background: $primary-btn-active-clr;
     border: 1px solid $primary-btn-active-clr;

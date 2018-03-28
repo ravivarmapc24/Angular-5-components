@@ -170,7 +170,9 @@ label {
 .color-accent-lt {
     color: $accent-lt;
 }
-
+.color-accent-ltr {
+    color: $accent-ltr;
+}
 .color-accent-dk {
     color: $accent-dk;
 }
@@ -195,6 +197,9 @@ label {
 }
 .txt-size-sm {
     font-size: 16px !important;
+}
+.txt-size-xsm {
+    font-size: 18px;
 }
 .txt-size-md {
     font-size: 22px;

@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   renderer: any;
-
-  isMenuOpened: boolean = false;
+  isHamburgerOpened = false;
+  isMenuOpened = false;
   cities = [
     {id: 1, name: 'Option 1'},
     {id: 2, name: 'Option 2'},
@@ -17,6 +17,11 @@ export class AppComponent {
     {id: 3, name: 'Option 4'},
     {id: 3, name: 'Option 5'}
 ];
+Uioptions = [
+        {id: 1, name: 'Primary Residence'},
+        {id: 2, name: 'Secondary Residence'},
+        {id: 3, name: 'Owner'}
+    ];
   title = 'app';
   foods = [
     { value: 'steak-0', viewValue: 'Steak' },
@@ -44,11 +49,14 @@ export class AppComponent {
   }
   toggleNavbar() {
     this.isMenuOpened = !this.isMenuOpened;
-    if (this.isMenuOpened) {
-      document.body.className = 'modal-open';
+    if  ( this.isMenuOpened ) {
+      document.body.className =  'modal-open';
       } else {
-      document.body.className = '';
-      } 
+      document.body.className =  ' ';
+      }
+  }
+  toggleHamburger() {
+    this.isHamburgerOpened = !this.isHamburgerOpened;
   }
 
 }
