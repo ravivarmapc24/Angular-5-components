@@ -186,8 +186,9 @@ main {
   .box-container-in {
     margin-bottom: 30px;
     padding: .5rem 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background-color: #E6EFF6;
     .fa-question {
       padding: 3px 6px;
       font-size: 14px;
@@ -195,6 +196,11 @@ main {
       border-radius: 100%;
       color: $accent-lt;
     }
+  }
+  .active-card {
+    border: 1px solid $brand-clr;
+    border-radius: 7px;
+    background-color: $white;
   }
   .sub-head {
     font-size: 13px;
@@ -561,6 +567,14 @@ main {
   @media screen and (max-width:575px){
     font-size:14px; 
   }
+}
+.heading-small {
+  @media screen and (max-width:767px){
+    font-size: 18px !important;
+  }
+}
+.line-height-disclaimer {
+  line-height: 18px;
 }
 .copyright-container {
   label:last-child {

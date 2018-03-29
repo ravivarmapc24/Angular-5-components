@@ -254,18 +254,18 @@
 
         <div class="d-flex w-100  py-1 justify-content-between align-items-center">
           <div class="lft-sect">
-            <h1 class="color-brand-dk">
-              Your Quotes
+            <h1 class="color-brand-dk heading-small">
+              Recommended Products that meet your goal of Refinancing.
             </h1>
           </div>
-          <div class="rt-sect">
-            <button>
+          <!-- <div class="rt-sect"> -->
+            <!-- <button>
                   <i class="fa fa-sort"></i><span class="d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block pl-2">Sort by Rate</span>
               </button>
             <button class="custom-popover-cls filter-btn ml-2" placement="bottom" [ngbPopover]="popContent">
                   <i class="fa fa-filter"></i><span class="d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block pl-2">Filter your quotes <span class="badge badge-default">20</span></span>
-              </button>
-            <ng-template #popContent>
+              </button> -->
+            <!-- <ng-template #popContent>
               <div class="filter-inner-template">
                 <ul class="nav nav-pills">
                   <li class="nav-item">
@@ -281,20 +281,20 @@
                     </button>
                 </div>
               </div>
-            </ng-template>
+            </ng-template> -->
             <!--button type="button" class="btn btn-secondary" [ngbPopover]="popContent" popoverTitle="Fancy content">
                 I've got markup and bindings in my popover!
               </button-->
-          </div>
+          <!-- </div> -->
         </div>
 
-        <div>
-          <p class="head-desc pt-2">We recommend the following rates for a loan amount of <a href="javaScript:;">$260,000</a>.</p>
+        <div class="d-flex w-100 justify-content-end">
+          <span class="color-brand-dk pointer txt-size-sm semi-bold text-small">Sort</span>
         </div>
 
       </div>
       <div class="box-container pt-6 pb-0">
-        <div class="box-container-in p-2">
+        <div class="box-container-in p-2 active-card">
           <!-- <div>
               <label class="sub-head m-0">
                   Lowest APR
@@ -359,171 +359,228 @@
                 <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
               </div>
             </div>
-            <div class="mt-4">
-              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk"></i>
+            <div class="vertical-center">
+              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
               <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
-
-        <div class="box-container-in px-3 py-2">
-          <div>
-            <label class="sub-head m-0">
-                Lowest APR
-              </label>
-          </div>
-          <div class="d-flex w-100 py-1 justify-content-between align-items-center">
-            <div class="head">
-              <span class="color-accent-dkr">30 Yr Fixed</span> <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-question"></i></span>
-
+        <div class="box-container-in p-2">
+            <!-- <div>
+                <label class="sub-head m-0">
+                    Lowest APR
+                </label>
+              </div> -->
+            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
+              <div class="head d-flex flex-column flex-sm-row">
+                <div>
+                  <span class="color-white text-small">30-year Fixed Conventional</span>
+                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
+                </div>
+                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
+                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+              </div>
+              <div class="header-btn">
+                <!-- <button class="btn-secondary"> 
+                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
+                  </button> -->
+                <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+                    <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
+                  </button>
+              </div>
             </div>
-            <div class="header-btn">
-              <button class="btn-secondary"> 
-                  <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                </button>
+            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
+  
+              <!-- <div class="summary-sect">
+                  <div>RATE</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>APR</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>MO. PAYMENT</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>CLOSING COST</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>LENDER FEES</div>
+                  <div>4.275%</div>
+                </div> -->
+              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+                <div class="summary-sect p-md-3">
+                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
+                </div>
+              </div>
+              <div class="vertical-center">
+                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
+              </div>
             </div>
-          </div>
-          <div class="d-flex w-100 pt-2 justify-content-xl-between flex-column flex-md-row">
-            <div class="summary-sect">
-              <div>RATE</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>APR</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>MO. PAYMENT</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>CLOSING COST</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>LENDER FEES</div>
-              <div>4.275%</div>
-            </div>
-          </div>
-
-          <!--div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                  <div class="summary-sect">
-                    <button> 
-                              <span class=" d-sm-inline-block d-md-none d-lg-none d-xl-inline-block">View Details |</span> <span>></span> 
-                            </button>
-                  </div>
-                </div-->
-
         </div>
-
-        <div class="main-box-header">
-          <span class="color-accent-dkr pb-4 semi-bold txt-size-md">30 Yr Fixed</span> <span class="custom-popover-cls" placement="right"
-            ngbPopover="30 Years fixed."><i class="fa fa-question"></i></span>
-
+        <div class="box-container-in p-2">
+            <!-- <div>
+                <label class="sub-head m-0">
+                    Lowest APR
+                </label>
+              </div> -->
+            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
+              <div class="head d-flex flex-column flex-sm-row">
+                <div>
+                  <span class="color-white text-small">30-year Fixed Conventional</span>
+                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
+                </div>
+                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
+                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+              </div>
+              <div class="header-btn">
+                <!-- <button class="btn-secondary"> 
+                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
+                  </button> -->
+                <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+                    <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
+                  </button>
+              </div>
+            </div>
+            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
+  
+              <!-- <div class="summary-sect">
+                  <div>RATE</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>APR</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>MO. PAYMENT</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>CLOSING COST</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>LENDER FEES</div>
+                  <div>4.275%</div>
+                </div> -->
+              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+                <div class="summary-sect p-md-3">
+                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
+                </div>
+              </div>
+              <div class="vertical-center">
+                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
+              </div>
+            </div>
         </div>
-
-        <div class="box-container-in px-3 py-2">
-          <div>
-            <label class="sub-head m-0">
-                Lowest APR
-              </label>
-          </div>
-          <div class="d-flex w-100 py-1 justify-content-between align-items-center">
-            <div class="head">
-              <span class="color-accent-dkr">30 Yr Fixed</span> <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-question"></i></span>
-
+        <div class="box-container-in p-2 mb-2">
+            <!-- <div>
+                <label class="sub-head m-0">
+                    Lowest APR
+                </label>
+              </div> -->
+            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
+              <div class="head d-flex flex-column flex-sm-row">
+                <div>
+                  <span class="color-white text-small">30-year Fixed Conventional</span>
+                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
+                </div>
+                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
+                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+              </div>
+              <div class="header-btn">
+                <!-- <button class="btn-secondary"> 
+                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
+                  </button> -->
+                <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+                    <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
+                  </button>
+              </div>
             </div>
-            <div class="header-btn">
-              <button class="btn-secondary"> 
-                  <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                </button>
+            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
+  
+              <!-- <div class="summary-sect">
+                  <div>RATE</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>APR</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>MO. PAYMENT</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>CLOSING COST</div>
+                  <div>4.275%</div>
+                </div>
+                <div class="summary-sect">
+                  <div>LENDER FEES</div>
+                  <div>4.275%</div>
+                </div> -->
+              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+                <div class="summary-sect p-md-3">
+                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
+                </div>
+                <div class="summary-sect p-md-3 border-none">
+                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
+                </div>
+              </div>
+              <div class="vertical-center">
+                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
+              </div>
             </div>
-          </div>
-
-          <div class="d-flex w-100 pt-2 justify-content-xl-between flex-column flex-md-row">
-            <div class="summary-sect">
-              <div>RATE</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>APR</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>MO. PAYMENT</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>CLOSING COST</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>LENDER FEES</div>
-              <div>4.275%</div>
-            </div>
-          </div>
-
-          <!--div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                  <div class="summary-sect">
-                    <button> 
-                              <span class=" d-sm-inline-block d-md-none d-lg-none d-xl-inline-block">View Details |</span> <span>></span> 
-                            </button>
-                  </div>
-                </div-->
-        </div>
-        <div class="box-container-in px-3 py-2 mb-0">
-          <div>
-            <label class="sub-head m-0">
-                Lowest APR
-              </label>
-          </div>
-          <div class="d-flex w-100 py-1 justify-content-between align-items-center">
-            <div class="head">
-              <span class="color-accent-dkr">30 Yr Fixed</span> <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-question"></i></span>
-
-            </div>
-            <div class="header-btn">
-              <button class="btn-secondary"> 
-                  <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                </button>
-            </div>
-          </div>
-
-          <div class="d-flex w-100 pt-2 justify-content-xl-between flex-column flex-md-row">
-            <div class="summary-sect">
-              <div>RATE</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>APR</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>MO. PAYMENT</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>CLOSING COST</div>
-              <div>4.275%</div>
-            </div>
-            <div class="summary-sect">
-              <div>LENDER FEES</div>
-              <div>4.275%</div>
-            </div>
-          </div>
-
-          <!--div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                  <div class="summary-sect">
-                    <button> 
-                              <span class=" d-sm-inline-block d-md-none d-lg-none d-xl-inline-block">View Details |</span> <span>></span> 
-                            </button>
-                  </div>
-                </div-->
-
         </div>
 
       </div>
-      <p class="txt-size-xxs my-2 mb-0  d-inline-block">
+      <p class="txt-size-xxs my-2 mb-0  d-inline-block line-height-disclaimer">
           Disclaimer: The advertisement and the loan products offered here are from third parties who are licensed mortgage lenders or mortgage
           brokers. MortgageHippo is not responsible for any of the products and services offered by the lenders or brokers here and have not acted
           as a mortgage broker or originator in publishing or displaying advertisement or loan products information to users. No recommendation, 
