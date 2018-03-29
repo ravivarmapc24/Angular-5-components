@@ -575,6 +575,7 @@ main {
 }
 .line-height-disclaimer {
   line-height: 18px;
+  width:calc(100% - 100px);
 }
 .copyright-container {
   label:last-child {
@@ -584,4 +585,16 @@ main {
     }
   }
 }
-
+.help {
+  width:110px;
+  background-color: #5F5F5F;
+  border:1px solid transparent;
+  border-radius: 100px 0 0 100px; 
+  span {
+    border:1px solid $black;
+    border-radius: 50%;
+    background-color: $black;
+  }
+  right: -20px;
+  bottom:0px;
+}
