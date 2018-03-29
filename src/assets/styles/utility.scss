@@ -239,4 +239,10 @@ label {
     transform: rotate(90deg);
 }
 
-
+/*----new----*/
+.border-bottom-brand-dk {
+    border-bottom: 2px solid $brand-clr-dk;
+}
+.border-white {
+    border:1px solid $white;
+}
