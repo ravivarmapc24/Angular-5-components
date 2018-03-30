@@ -469,7 +469,25 @@ main {
 
 /*fa icons*/
 .footer-wrapper {
-  padding: 47px 1rem 2.5rem 1rem;
+  background: #f9f9f9;
+  position: relative;
+  top: 65px;
+
+&:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -45px;
+  width: 100%;
+  height: 80px;
+  background: #f9f9f9;
+  -webkit-transform: skewY(2.5deg);
+  -moz-transform: skewY(2.5deg);
+  -ms-transform: skewY(2.5deg);
+  -o-transform: skewY(2.5deg);
+  transform: skewY(2.5deg);
+  -webkit-backface-visibility: hidden;
+}
     .fa {
   padding: 10px;
     font-size: 20px;
@@ -494,52 +512,8 @@ main {
 }
 .fa-envelope {
   background: #666666;
+} 
 }
-&.site-footer-container {
-  .site-footer {
-    -webkit-transform: rotate(1.5deg);
-	-moz-transform: rotate(1.5deg);
-	-o-transform: rotate(1.5deg);
-	-ms-transform: rotate(1.5deg);
-	transform: rotate(1.5deg);
-     margin: -65px -1rem 0 -1rem;
-    padding: 23px 0px 0 0px;
-  }
-  .site-footer-inner {
-	-webkit-transform: rotate(-1.5deg);
-	-moz-transform: rotate(-1.5deg);
-	-o-transform: rotate(-1.5deg);
-	-ms-transform: rotate(-1.5deg);
-	transform: rotate(-1.5deg);
-   margin: 0 1rem;
-  }
-  
-}
-    @media #{$large} {
-      padding: 1rem;
-      &.site-footer-container {
-  .site-footer {
-    -webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(0deg);
- margin: 0;
-    padding: 0;
-  }
-  .site-footer-inner {
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	-ms-transform: rotate(0deg);
-	transform: rotate(0deg);
-  margin: 0;
-  }
-  
-}
-  }
-}
-
 /*---new---*/
 .border-none {
   border-left: 1px solid #dee2e6;
@@ -610,3 +584,5 @@ main {
 .rounded-b {
   border-radius: 25px;
 }
+
+
