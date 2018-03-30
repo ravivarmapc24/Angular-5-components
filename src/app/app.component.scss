@@ -591,10 +591,18 @@ main {
   background-color: #5F5F5F;
   border:1px solid transparent;
   border-radius: 100px 0 0 100px; 
-  span {
-    border:1px solid $black;
+  a {
+    width:25px;
     border-radius: 50%;
+    border:1px solid transparent;
     background-color: $black;
+    height: 25px;
+    text-align: center;
+    &::before {
+      color:$white;
+      margin-top:5px;
+      display: inline-block;
+    }
   }
   right: -20px;
   bottom:0px;
