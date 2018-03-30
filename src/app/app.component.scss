@@ -554,12 +554,13 @@ main {
       left:1px;
       position: relative
   }
-  .see-details {
-    &:hover {
-      background-color: $white;
-      i {
-        color: $brand-clr;
-      }
+}
+.see-details {
+  &:hover {
+    background-color: $white;
+    color: $brand-clr;
+    i {
+      color: $brand-clr;
     }
   }
 }
@@ -597,4 +598,7 @@ main {
   }
   right: -20px;
   bottom:0px;
+}
+.rounded-b {
+  border-radius: 25px;
 }
