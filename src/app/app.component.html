@@ -155,24 +155,9 @@
           <li class="nav-item">
             <a class="nav-link txt-size-xxs semi-bold" href="#">CONTACT ME</a>
           </li>
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-          Dropdown
-        </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>-->
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-primary my-2 my-sm-0 login-btn" type="submit">Login</button>
+          <button class="btn btn-primary my-2 my-sm-0 login-btn semi-bold txt-size-xs px-4 py-1" type="submit">LOG IN</button>
         </form>
       </div>
     </nav>
@@ -190,111 +175,80 @@
       <div class="input-section">
         <h4 class="semi-bold txt-size-md color-white text-center">Your Loan Inputs</h4>
         <div class="mt-4 mb-2">
-          <!-- <ul class="nav nav-pills">
+          <ul class="nav nav-pills">
             <li class="">
-              <a class="nav-link active px-3" href="javascript:void(0);">Buy A Home</a>
+              <a class="nav-link semi-bold px-3 color-white txt-size-sm" href="javascript:void(0);">Buy A Home</a>
             </li>
-            <li class="">
-              <button>
-                  <span class="color-white d-inline-block border border-white rounded-b px-2 see-details">Refinance</span>
-              </button>
-                
+            <li class="active-link">
+              <a class="nav-link semi-bold txt-size-sm  px-3  color-white" href="javascript:void(0);">Refinance</a>
             </li>
-          </ul> -->
-          <div>
+          </ul>
+          <!-- <div>
             <span class="color-white">Buy A Home</span>
             <button class="float-right">
                 <span class="color-white d-inline-block border border-white rounded-b px-2 see-details">Refinance</span>
             </button>
-          </div>
+          </div> -->
         </div>
-        <div class="mt-2">
-          <label class="mb-0">City | Country | State | Zip Code</label>
-          <input type="text" class="rounded px-2" name="Zip Code" placeholder="Enter Zip Code">
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">City | Country | State | Zip Code</label>
+          <input type="text" class="rounded px-2 semi-bold" name="Zip Code" placeholder="Enter Zip Code">
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Property Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
-          <ng-select class="rounded" [items]="Uioptions" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Property Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <ng-select class="rounded semi-bold" [items]="Uioptions" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Property Use</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
-          <ng-select class="rounded" [items]="options2" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Property Use</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <ng-select class="rounded semi-bold" [items]="options2" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Loan Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
-          <ng-select class="rounded" [items]="options3" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Loan Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <ng-select class="rounded semi-bold" [items]="options3" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Property Value</label>
-          <input type="text" class="rounded px-2" name="Property Value" placeholder="Enter Property Price">
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Property Value</label>
+          <input type="text" class="rounded px-2 semi-bold" name="Property Value" placeholder="Enter Property Price">
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Current Mortgage Balance</label>
-          <input type="text" class="rounded px-2" name="Mortgage Balance" placeholder="Enter Mortgage Balance">
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Current Mortgage Balance</label>
+          <input type="text" class="rounded px-2 semi-bold" name="Mortgage Balance" placeholder="Enter Mortgage Balance">
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Credit Score</label>
-          <ng-select class="rounded" [items]="options4" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Credit Score</label>
+          <ng-select class="rounded semi-bold" [items]="options4" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
-        <div class="mt-2">
-          <label class="mb-0">Locked Period</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
-          <ng-select class="rounded" [items]="options5" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
+        <div class="mt-1">
+          <label class="mb-0 semi-bold">Locked Period</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <ng-select class="rounded semi-bold" [items]="options5" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
         <div class="my-4">
           <button class="btn-tertiary inverse w-100 p-2 border-rad-25"> 
-                  Get Your Quotes 
+                  <span class="bold">GET RATE QUOTE</span>                  
           </button>
         </div>
 
       </div>
     </aside>
-    <article class="py-0 position-relative ">
+    <article class="py-0 position-relative ml-3 ">
       <div class="rate-quote-header">
 
         <div class="d-flex w-100  py-1 justify-content-between align-items-center">
           <div class="lft-sect">
-            <h1 class="color-brand-dk heading-small">
+            <h1 class="color-brand-dk heading-small semi-bold">
               Recommended Products that meet your goal of Refinancing.
             </h1>
           </div>
-          <!-- <div class="rt-sect"> -->
-            <!-- <button>
-                  <i class="fa fa-sort"></i><span class="d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block pl-2">Sort by Rate</span>
-              </button>
-            <button class="custom-popover-cls filter-btn ml-2" placement="bottom" [ngbPopover]="popContent">
-                  <i class="fa fa-filter"></i><span class="d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block pl-2">Filter your quotes <span class="badge badge-default">20</span></span>
-              </button> -->
-            <!-- <ng-template #popContent>
-              <div class="filter-inner-template">
-                <ul class="nav nav-pills">
-                  <li class="nav-item">
-                    <a class="nav-link active px-3" href="javascript:void(0);">Rate</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link px-3" href="javascript:void(0);">Down Payment</a>
-                  </li>
-                </ul>
-                <div class="text-center mt-2">
-                  <button _ngcontent-c0="" class="w-50">
-                      Apply
-                    </button>
-                </div>
-              </div>
-            </ng-template> -->
-            <!--button type="button" class="btn btn-secondary" [ngbPopover]="popContent" popoverTitle="Fancy content">
-                I've got markup and bindings in my popover!
-              </button-->
-          <!-- </div> -->
         </div>
 
         <div class="d-flex w-100 justify-content-end">
@@ -303,302 +257,223 @@
 
       </div>
       <div class="box-container pt-6 pb-0">
-        <div class="box-container-in p-2 active-card">
-          <!-- <div>
-              <label class="sub-head m-0">
-                  Lowest APR
-              </label>
-            </div> -->
-          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
+        <div class="box-container-in p-2 active-card mb-2">
+          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr b-radius-10">
             <div class="head d-flex flex-column flex-sm-row">
               <div>
-                <span class="color-white text-small">30-year Fixed Conventional</span>
+                <span class="color-white text-small semi-bold">30-year Fixed Conventional</span>
                 <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
               </div>
               <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
               <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
             </div>
             <div class="header-btn">
-              <!-- <button class="btn-secondary"> 
-                    <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                </button> -->
               <button class="p-0">
-                  <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+                  <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block semi-bold">See Details</span>
                   <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
                 </button>
             </div>
           </div>
-          <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
-
-            <!-- <div class="summary-sect">
-                <div>RATE</div>
-                <div>4.275%</div>
-              </div>
-              <div class="summary-sect">
-                <div>APR</div>
-                <div>4.275%</div>
-              </div>
-              <div class="summary-sect">
-                <div>MO. PAYMENT</div>
-                <div>4.275%</div>
-              </div>
-              <div class="summary-sect">
-                <div>CLOSING COST</div>
-                <div>4.275%</div>
-              </div>
-              <div class="summary-sect">
-                <div>LENDER FEES</div>
-                <div>4.275%</div>
-              </div> -->
+          <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
-              <div class="summary-sect p-md-3">
+              <div class="summary-sect p-md-2">
                 <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
-                <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
-              <div class="summary-sect p-md-3 border-none">
+              <div class="summary-sect p-md-2 border-none">
                 <div><span class="txt-size-md color-brand-dk">$984</span></div>
-                <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
-              <div class="summary-sect p-md-3 border-none">
+              <div class="summary-sect p-md-2 border-none">
                 <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
-                <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
-              <div class="summary-sect p-md-3 border-none">
+              <div class="summary-sect p-md-2 border-none">
                 <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
-                <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
-        <div class="box-container-in p-2">
-            <!-- <div>
-                <label class="sub-head m-0">
-                    Lowest APR
-                </label>
-              </div> -->
-            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
-              <div class="head d-flex flex-column flex-sm-row">
-                <div>
-                  <span class="color-white text-small">30-year Fixed Conventional</span>
-                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
-                </div>
-                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
-                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+        <div class="box-container-in p-2 active-card mb-2">
+          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr b-radius-10">
+            <div class="head d-flex flex-column flex-sm-row">
+              <div>
+                <span class="color-white text-small semi-bold">30-year Fixed Conventional</span>
+                <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
               </div>
-              <div class="header-btn">
-                <!-- <button class="btn-secondary"> 
-                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                  </button> -->
-                <button class="p-0">
-                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+            </div>
+            <div class="header-btn">
+              <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block semi-bold">See Details</span>
                     <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
                   </button>
+            </div>
+          </div>
+          <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
+            <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+              <div class="summary-sect p-md-2">
+                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
-            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
-  
-              <!-- <div class="summary-sect">
-                  <div>RATE</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>APR</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>MO. PAYMENT</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>CLOSING COST</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>LENDER FEES</div>
-                  <div>4.275%</div>
-                </div> -->
-              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
-                <div class="summary-sect p-md-3">
-                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
-                </div>
-              </div>
-              <div class="vertical-center">
-                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
-              </div>
+            <div class="vertical-center">
+              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
+          </div>
         </div>
-        <div class="box-container-in p-2">
-            <!-- <div>
-                <label class="sub-head m-0">
-                    Lowest APR
-                </label>
-              </div> -->
-            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
-              <div class="head d-flex flex-column flex-sm-row">
-                <div>
-                  <span class="color-white text-small">30-year Fixed Conventional</span>
-                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
-                </div>
-                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
-                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+        <div class="box-container-in p-2 active-card mb-2">
+          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr b-radius-10">
+            <div class="head d-flex flex-column flex-sm-row">
+              <div>
+                <span class="color-white text-small semi-bold">30-year Fixed Conventional</span>
+                <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
               </div>
-              <div class="header-btn">
-                <!-- <button class="btn-secondary"> 
-                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                  </button> -->
-                <button class="p-0">
-                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+            </div>
+            <div class="header-btn">
+              <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block semi-bold">See Details</span>
                     <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
                   </button>
+            </div>
+          </div>
+          <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
+            <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+              <div class="summary-sect p-md-2">
+                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
-            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
-  
-              <!-- <div class="summary-sect">
-                  <div>RATE</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>APR</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>MO. PAYMENT</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>CLOSING COST</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>LENDER FEES</div>
-                  <div>4.275%</div>
-                </div> -->
-              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
-                <div class="summary-sect p-md-3">
-                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
-                </div>
-              </div>
-              <div class="vertical-center">
-                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
-              </div>
+            <div class="vertical-center">
+              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
+          </div>
         </div>
-        <div class="box-container-in p-2 mb-2">
-            <!-- <div>
-                <label class="sub-head m-0">
-                    Lowest APR
-                </label>
-              </div> -->
-            <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr rounded">
-              <div class="head d-flex flex-column flex-sm-row">
-                <div>
-                  <span class="color-white text-small">30-year Fixed Conventional</span>
-                  <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
-                </div>
-                <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Down Payment</span>
-                <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Down Payment</span>
+        <div class="box-container-in p-2 mb-2 active-card">
+          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr b-radius-10">
+            <div class="head d-flex flex-column flex-sm-row">
+              <div>
+                <span class="color-white text-small semi-bold">30-year Fixed Conventional</span>
+                <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
               </div>
-              <div class="header-btn">
-                <!-- <button class="btn-secondary"> 
-                      <span class="view-detail-btn d-none d-sm-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block">View Details</span> <span><i class="fa fa-angle-right"></i></span> 
-                  </button> -->
-                <button class="p-0">
-                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block">See Details</span>
+              <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Lowest Rate</span>
+              <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Lowest Rate</span>
+            </div>
+            <div class="header-btn">
+              <button class="p-0">
+                    <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block semi-bold">See Details</span>
                     <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
                   </button>
+            </div>
+          </div>
+          <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
+            <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+              <div class="summary-sect p-md-2">
+                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
-            <div class="d-flex w-100 p-3 justify-content-md-between flex-column flex-md-row">
-  
-              <!-- <div class="summary-sect">
-                  <div>RATE</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>APR</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>MO. PAYMENT</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>CLOSING COST</div>
-                  <div>4.275%</div>
-                </div>
-                <div class="summary-sect">
-                  <div>LENDER FEES</div>
-                  <div>4.275%</div>
-                </div> -->
-              <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
-                <div class="summary-sect p-md-3">
-                  <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Rate</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">$984</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Mo. Payment</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">APR</span></div>
-                </div>
-                <div class="summary-sect p-md-3 border-none">
-                  <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
-                  <div class="mt-1"><span class="txt-size-xxs">Closing Cost</span></div>
-                </div>
-              </div>
-              <div class="vertical-center">
-                <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-                <button class="btn btn-primary my-2 my-sm-0 login-btn txt-size-xs">Discuss Quote</button>
-              </div>
+            <div class="vertical-center">
+              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
+          </div>
         </div>
-
+        <div class="box-container-in p-2 mb-2 active-card">
+          <div class="d-flex flex-md-row w-100 px-3 py-2 justify-content-between align-items-center bg-brand-clr b-radius-10">
+            <div class="head d-flex flex-column flex-sm-row">
+              <div>
+                <span class="color-white text-small semi-bold">30-year Fixed Conventional</span>
+                <span class="custom-popover-cls" placement="right" ngbPopover="30 Years fixed."><i class="fa fa-info-circle color-brand-lt txt-size-xsm mx-sm-2 text-small"></i></span>
+              </div>
+              <span class="px-2  border-left color-white txt-size-xs p-b0 d-none d-sm-inline-block">Fastest Payback</span>
+              <span class="color-white txt-size-xs  d-inline-block d-sm-none txt-size-xs">Fastest Payback</span>
+            </div>
+            <div class="header-btn">
+              <button class="p-0">
+                      <span class="color-white border-bottom txt-size-xs d-none d-md-inline-block d-lg-inline-block d-xl-inline-block semi-bold">See Details</span>
+                      <span class="color-white d-inline-block d-md-none d-lg-none d-xl-none border border-white rounded px-2 see-details"><i class="fa fa-angle-right"></i></span>
+                    </button>
+            </div>
+          </div>
+          <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
+            <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
+              <div class="summary-sect p-md-2">
+                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
+              </div>
+              <div class="summary-sect p-md-2 border-none">
+                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
+              </div>
+            </div>
+            <div class="vertical-center">
+              <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
+              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="disclaimer">
-        <p class="txt-size-xxs my-2 d-inline-block line-height-disclaimer">
-          Disclaimer: The advertisement and the loan products offered here are from third parties who are licensed mortgage lenders or mortgage
-          brokers. MortgageHippo is not responsible for any of the products and services offered by the lenders or brokers here and have not acted
-          as a mortgage broker or originator in publishing or displaying advertisement or loan products information to users. No recommendation, 
-          endorsement, sponsorship or referral may be implied or inferred by displaying this information.
+        <p class="txt-size-xxxxs my-2 d-inline-block line-height-disclaimer">
+          Disclaimer: The advertisement and the loan products offered here are from third parties who are licensed mortgage lenders
+          or mortgage brokers. MortgageHippo is not responsible for any of the products and services offered by the lenders
+          or brokers here and have not acted as a mortgage broker or originator in publishing or displaying advertisement
+          or loan products information to users. No recommendation, endorsement, sponsorship or referral may be implied or
+          inferred by displaying this information.
         </p>
-        <div class="help d-inline-block px-3 position-absolute"><label class="w-100 color-white m-0 txt-size-xxs pointer"> Need Help?</label> <a class="fa fa-envelope-o color-white" href="javascript:void(0)"></a><a class="fa fa-phone m-1" href="javascript:void(0)"></a></div>
-          <!-- <i class="fa fa-envelope-o  px-1 color-white txt-size-xxs"></i> -->
-          <!-- <i class="fa fa-phone  px-1 color-white txt-size-xxs"></i> -->
+        <div class="help d-inline-block px-3 position-absolute"><label class="w-100 color-white m-0 txt-size-xxs pointer"> Need Help?</label> <a class="fa fa-envelope-o color-white"
+            href="javascript:void(0)"></a><a class="fa fa-phone m-1" href="javascript:void(0)"></a></div>
       </div>
     </article>
   </main>
@@ -608,86 +483,86 @@
   <footer class="footer">
     <div class="footer-wrapper">
       <div class="container-fluid">
-            <div class="row d-flex pb-3 border-bottom-color-lt m-0">
-              <div class="col-lg-3">
-                <div>
-                  <label class="color-accent-dk semi-bold txt-size-md">Contact us</label>
-                </div>
-                <div>
-                  <label class="color-accent-dk semi-bold m-0">220 Congress Park Drive STE 140 Delray Beach, FL 33445</label>
-                </div>
-                <div>
-                  <label class="color-brand semi-bold m-0">customercare@cdmtg.com</label>
-                </div>
-                <div>
-                  <label class="color-brand semi-bold txt-size-xsm">+1 (855) 790-7811</label>
-                </div>
-              </div>
-              <div class="col-lg-6 my-3 my-lg-0">
-                <div>
-                  <label class="color-accent-dk semi-bold txt-size-md">Company</label>
-                </div>
-                <div class="row d-flex flex-row">
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Purchase</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Tools</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Privacy Policy</a>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Refinance</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">About Us</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Terms of Use</a>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Loan Options</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">NMLS Consumer Access</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
-                    <a class="color-accent-lt txt-size-xs semi-bold " href="#">Disclosures & Licensing</a>
-                  </div>
-                </div>
-                <div>
-                  <label class="color-accent-dk txt-size-sm semi-bold">NMLS# 472433</label>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div>
-                  <label class="color-accent-dk semi-bold txt-size-md">Connect with us</label>
-                </div>
-                <div class="social-media-wrapper">
-                  <a href="#" class="fa fa-facebook"></a>
-                  <a href="#" class="fa fa-linkedin"></a>
-                  <a href="#" class="fa fa-phone"></a>
-                  <a href="#" class="fa fa-envelope"></a>
-                </div>
-              </div>
+        <div class="row d-flex pb-3 border-bottom-color-lt m-0">
+          <div class="col-lg-3">
+            <div>
+              <label class="color-accent-dk semi-bold txt-size-md">Contact us</label>
             </div>
-
-
-
-            <div class="py-2 d-flex justify-content-between">
-              <div class="copyright-container">
-                <label class="color-accent-dk">Copyright &#169; 2018</label>
-                <label class="color-accent-dk">ConsumerDirect Mortgage</label>
-              </div>
+            <div>
+              <label class="color-accent-dk semi-bold m-0">220 Congress Park Drive STE 140 Delray Beach, FL 33445</label>
             </div>
-
-
+            <div>
+              <label class="color-brand semi-bold m-0">customercare@cdmtg.com</label>
+            </div>
+            <div>
+              <label class="color-brand semi-bold txt-size-xsm">+1 (855) 790-7811</label>
+            </div>
           </div>
+          <div class="col-lg-6 my-3 my-lg-0">
+            <div>
+              <label class="color-accent-dk semi-bold txt-size-md">Company</label>
+            </div>
+            <div class="row d-flex flex-row">
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Purchase</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Tools</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Privacy Policy</a>
+              </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Refinance</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">About Us</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Terms of Use</a>
+              </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Loan Options</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">NMLS Consumer Access</a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 py-1 py-sm-0">
+                <a class="color-accent-lt txt-size-xs semi-bold " href="#">Disclosures & Licensing</a>
+              </div>
+            </div>
+            <div>
+              <label class="color-accent-dk txt-size-sm semi-bold">NMLS# 472433</label>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div>
+              <label class="color-accent-dk semi-bold txt-size-md">Connect with us</label>
+            </div>
+            <div class="social-media-wrapper">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-phone"></a>
+              <a href="#" class="fa fa-envelope"></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="py-2 d-flex justify-content-between">
+          <div class="copyright-container">
+            <label class="color-accent-dk txt-size-xxxxs">Copyright &#169; 2018</label>
+            <label class="color-accent-dk txt-size-xxxxs">ConsumerDirect Mortgage</label>
+          </div>
+        </div>
+
+
+      </div>
     </div>
-   </footer>
+  </footer>
 
 
 

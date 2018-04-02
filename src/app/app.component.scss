@@ -161,28 +161,28 @@ main {
 .box-container {
   width: 100%;
   padding: 2rem 0;
-  float: left;
+//  float: left;
   position: relative;
-  .main-box-header {
-    h1 {
-      float: left;
-      width: 100%;
-      position: relative;
-      font-size: 26px;
-      margin: 0;
-      padding: 1rem 0 2rem;
-    }
-    .color-accent-dkr{
-        display: inline-block;
-    }
-    .fa-question {
-      padding: 3px 6px;
-      border: 1px solid #ccc;
-      border-radius: 100%;
-      font-size: 18px;
-      color: $accent-lt;
-    }
-  }
+  // .main-box-header {
+  //   h1 {
+  //     float: left;
+  //     width: 100%;
+  //     position: relative;
+  //     font-size: 26px;
+  //     margin: 0;
+  //     padding: 1rem 0 2rem;
+  //   }
+  //   .color-accent-dkr{
+  //       display: inline-block;
+  //   }
+  //   .fa-question {
+  //     padding: 3px 6px;
+  //     border: 1px solid #ccc;
+  //     border-radius: 100%;
+  //     font-size: 18px;
+  //     color: $accent-lt;
+  //   }
+  // }
   .box-container-in {
     margin-bottom: 30px;
     padding: .5rem 1rem 0;
@@ -244,7 +244,7 @@ main {
   // }
   .summary-sect {
     width: 100%;
-    float: left;
+//    float: left;
     position: relative;
     padding-bottom: 1rem;
     >div {
@@ -272,7 +272,7 @@ main {
 
 .rate-quote-header {
   width: 100%;
-  float: left;
+//  float: left;
   position: relative;
   .lft-sect {
     h1 {
@@ -477,7 +477,7 @@ main {
   content: '';
   position: absolute;
   left: 0;
-  top: -45px;
+  top: -35px;
   width: 100%;
   height: 80px;
   background: #f9f9f9;
@@ -550,7 +550,10 @@ main {
 }
 .line-height-disclaimer {
   line-height: 18px;
-  width:calc(100% - 100px);
+  width:calc(100% - 70px);
+  @media screen and (max-width:767px){
+    width:100%;
+  }
 }
 .copyright-container {
   label:last-child {
@@ -581,8 +584,8 @@ main {
   right: -20px;
   bottom:0px;
 }
-.rounded-b {
+.active-link {
+  border:1px solid $white;
   border-radius: 25px;
 }
-
 

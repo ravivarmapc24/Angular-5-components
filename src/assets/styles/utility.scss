@@ -152,7 +152,7 @@ label {
     color: $brand-clr-secondary;
 }
 .color-white {
-    color: $white;
+    color: $white !important;
 }
 .color-error-red{
     color: $error-red;
@@ -245,4 +245,10 @@ label {
 }
 .border-white {
     border:1px solid $white;
+}
+.b-radius-10 {
+    border-radius: 10px;
+} 
+.txt-size-xxxxs {
+    font-size: 12px;
 }
