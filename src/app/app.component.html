@@ -126,7 +126,7 @@
 <div class="layout container-fluid p-0">
   <div class="overlay" [ngClass]="{'opened': isMenuOpened }"></div>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between px-4">
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
       <div class="logo-wrapper">
         <a class="navbar-brand logo d-inline-block" href="#"></a>
       </div>
@@ -164,7 +164,7 @@
 
   </header>
 
-  <main class="p-xl-4">
+  <main class="py-xl-4 px-xl-5">
     <aside class="rounded-xl" [ngClass]="{'opened': isMenuOpened }">
       <div class="resizer" [ngClass]="{'active': isMenuOpened }" (click)="toggleNavbar()">
         <div class="hamburger-btn">
@@ -172,10 +172,10 @@
         </div>
 
       </div>
-      <div class="input-section">
+      <div class="input-section p-4">
         <h4 class="semi-bold txt-size-md color-white text-center">Your Loan Inputs</h4>
-        <div class="mt-4 mb-2">
-          <ul class="nav nav-pills">
+        <div class="my-4">
+          <ul class="nav nav-pills justify-content-center w-100">
             <li class="">
               <a class="nav-link semi-bold px-3 color-white txt-size-sm" href="javascript:void(0);">Buy A Home</a>
             </li>
@@ -195,19 +195,19 @@
           <input type="text" class="rounded px-2 semi-bold" name="Zip Code" placeholder="Enter Zip Code">
         </div>
         <div class="mt-1">
-          <label class="mb-0 semi-bold">Property Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <label class="mb-0 semi-bold">Property Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-2 text-small"></i>
           <ng-select class="rounded semi-bold" [items]="Uioptions" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
         <div class="mt-1">
-          <label class="mb-0 semi-bold">Property Use</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <label class="mb-0 semi-bold">Property Use</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-2 text-small"></i>
           <ng-select class="rounded semi-bold" [items]="options2" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
         <div class="mt-1">
-          <label class="mb-0 semi-bold">Loan Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <label class="mb-0 semi-bold">Loan Type</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-2 text-small"></i>
           <ng-select class="rounded semi-bold" [items]="options3" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
@@ -220,6 +220,12 @@
           <label class="mb-0 semi-bold">Current Mortgage Balance</label>
           <input type="text" class="rounded px-2 semi-bold" name="Mortgage Balance" placeholder="Enter Mortgage Balance">
         </div>
+        <div class="mt-3">
+          <label class="checkbox semi-bold">Cash Out
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+          </label>
+        </div>
         <div class="mt-1">
           <label class="mb-0 semi-bold">Credit Score</label>
           <ng-select class="rounded semi-bold" [items]="options4" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
@@ -227,11 +233,17 @@
           </ng-select>
         </div>
         <div class="mt-1">
-          <label class="mb-0 semi-bold">Locked Period</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-sm-2 text-small"></i>
+          <label class="mb-0 semi-bold">Locked Period</label><i class="fa fa-info-circle color-brand-lt txt-size-sm mx-2 text-small"></i>
           <ng-select class="rounded semi-bold" [items]="options5" bindLabel="name" bindValue="id" placeholder="Select" [typeahead]="typeahead"
             [(ngModel)]="selecteduioptionsId">
           </ng-select>
         </div>
+        <div class="mt-3">
+            <label class="checkbox semi-bold">Waive Escrow
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+            </label>
+          </div>
         <div class="my-4">
           <button class="btn-tertiary inverse w-100 p-2 border-rad-25"> 
                   <span class="bold">GET RATE QUOTE</span>                  
@@ -240,19 +252,19 @@
 
       </div>
     </aside>
-    <article class="py-0 position-relative ml-3 ">
+    <article class="py-0 position-relative ml-xl-3 pr-xl-0">
       <div class="rate-quote-header">
 
         <div class="d-flex w-100  py-1 justify-content-between align-items-center">
           <div class="lft-sect">
-            <h1 class="color-brand-dk heading-small semi-bold">
+            <h1 class="color-brand heading-small semi-bold">
               Recommended Products that meet your goal of Refinancing.
             </h1>
           </div>
         </div>
 
         <div class="d-flex w-100 justify-content-end">
-          <span class="color-brand-dk pointer txt-size-sm semi-bold text-small">Sort</span>
+          <span class="color-brand pointer txt-size-sm semi-bold text-small">Sort</span>
         </div>
 
       </div>
@@ -277,25 +289,25 @@
           <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
               <div class="summary-sect p-md-2">
-                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div><span class="txt-size-md color-brand">4.250%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div><span class="txt-size-md color-brand">$984</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div><span class="txt-size-md color-brand">4.411%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div><span class="txt-size-md color-brand-dk border-bottom-brand">$1,865</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0 bold b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
@@ -317,25 +329,25 @@
           <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
               <div class="summary-sect p-md-2">
-                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div><span class="txt-size-md color-brand">4.250%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div><span class="txt-size-md color-brand">$984</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div><span class="txt-size-md color-brand">4.411%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div><span class="txt-size-md color-brand border-bottom-brand-dk">$1,865</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0 bold b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
@@ -357,25 +369,25 @@
           <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
               <div class="summary-sect p-md-2">
-                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div><span class="txt-size-md color-brand">4.250%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div><span class="txt-size-md color-brand">$984</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div><span class="txt-size-md color-brand">4.411%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div><span class="txt-size-md color-brand border-bottom-brand-dk">$1,865</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0 bold  b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
@@ -399,25 +411,25 @@
           <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
               <div class="summary-sect p-md-2">
-                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div><span class="txt-size-md color-brand">4.250%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div><span class="txt-size-md color-brand">$984</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div><span class="txt-size-md color-brand">4.411%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div><span class="txt-size-md color-brand border-bottom-brand-dk">$1,865</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0 bold b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
@@ -441,25 +453,25 @@
           <div class="d-flex w-100 p-2 justify-content-md-between flex-column flex-md-row">
             <div class="d-md-inline-flex justify-content-between align-items-center w-75 text-md-center">
               <div class="summary-sect p-md-2">
-                <div><span class="txt-size-md color-brand-dk">4.250%</span></div>
+                <div><span class="txt-size-md color-brand">4.250%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Rate</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">$984</span></div>
+                <div><span class="txt-size-md color-brand">$984</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Mo. Payment</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk">4.411%</span></div>
+                <div><span class="txt-size-md color-brand">4.411%</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">APR</span></div>
               </div>
               <div class="summary-sect p-md-2 border-none">
-                <div><span class="txt-size-md color-brand-dk border-bottom-brand-dk">$1,865</span></div>
+                <div><span class="txt-size-md color-brand border-bottom-brand-dk">$1,865</span></div>
                 <div class="mt-1"><span class="txt-size-xxs bold">Closing Cost</span></div>
               </div>
             </div>
             <div class="vertical-center">
               <i class="fa fa-envelope-o txt-size-xsm align-middle color-brand-dk pointer"></i>
-              <button class="btn btn-primary ml-3 my-sm-0  b-radius-10 txt-size-xs">Discuss Quote</button>
+              <button class="btn btn-primary ml-3 my-sm-0 bold b-radius-10 txt-size-xs">Discuss Quote</button>
             </div>
           </div>
         </div>
@@ -483,7 +495,7 @@
   <footer class="footer">
     <div class="footer-wrapper">
       <div class="container-fluid">
-        <div class="row d-flex pb-3 border-bottom-color-lt m-0">
+        <div class="row d-flex pb-3">
           <div class="col-lg-3">
             <div>
               <label class="color-accent-dk semi-bold txt-size-md">Contact us</label>
@@ -552,10 +564,14 @@
 
 
 
-        <div class="py-2 d-flex justify-content-between">
+        <div class="py-2 d-flex justify-content-between border-top-color-lt vertical-center flex-column flex-md-row">
           <div class="copyright-container">
             <label class="color-accent-dk txt-size-xxxxs">Copyright &#169; 2018</label>
             <label class="color-accent-dk txt-size-xxxxs">ConsumerDirect Mortgage</label>
+          </div>
+          <div>
+            <span class="d-inline-block footer-img rating-img"></span>
+            <span class="d-inline-block footer-img lender-img"></span>
           </div>
         </div>
 

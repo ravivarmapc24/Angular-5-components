@@ -1,37 +1,39 @@
-
-
 /* You can add global styles to this file, and also import other style files */
-@import 'variables.scss';
 
+@import 'variables.scss';
 ng-select {
-  width: 300px;
+    width: 300px;
 }
+
 h3 {
     text-align: left;
     margin-bottom: 20px !important;
     margin-top: 30px !important;
 }
+
 h3.text-left {
     text-align: left;
 }
 
 body {
-  font-family: $font-body;
-  text-align: left;
-  font-style: normal;
-  font-weight: 300;
-  font-size: $global-font-size;
-  line-height: 1.5rem;
-  letter-spacing: 0.01rem;
-  color: $app-clr;
-  background-color: $app-bg-clr;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  &.modal-open {
-      overflow: hidden;
-  }
+    font-family: $font-body;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $global-font-size;
+    line-height: 1.5rem;
+    letter-spacing: 0.01rem;
+    color: $app-clr;
+    background: url(#{$path-to-images}/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    &.modal-open {
+        overflow: hidden;
+    }
 }

@@ -40,7 +40,7 @@ $accent-ltr: #cccccc;
 $grey: #cccccc;
 $grey-lt: #f9f9f9;
 $grey-dk: #d8d8d8;
-
+$grey-ltr:#b1b1b1;
 /* Application level changes */
 
 /* Application */
@@ -84,6 +84,13 @@ $navpill-border-clr: $brand-clr;
 
 $radio-clr: $accent-dk;
 $radio-active-clr: $brand-clr-lt;
+
+/* Checkbox */
+
+$checkbox-active: $brand-clr;
+$checkbox-bg: $white;
+$checkbox-border-rad: 4px;
+$checkbox-bg-disabled: $grey;
 
 /*Button*/
 /*primary button*/
